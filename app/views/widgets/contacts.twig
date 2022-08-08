@@ -1,0 +1,51 @@
+<section id="contacts" class="section contacts">
+  <div class="container">
+    <div class="flex contacts__flex">
+      <div class="flex__4 contacts__info contacts-info">
+        <div class="contacts__group contact-group">
+          <h4 class="contact-group__title">
+            Телефон:
+          </h4>
+          <a href="tel:{{ site_phone }}" class="contact-group__value contact-group__value--phone">
+            {{ site_phone }}
+          </a>
+        </div>
+        <div class="contacts__group contact-group">
+          <h4 class="contact-group__title">
+            ОТДЕЛ ПРОДАЖ:
+          </h4>
+          <span class="contact-group__value contact-group__value--adres">
+            <img src="assets/img/adres-icon1.svg" alt="">
+            {{ site_adress }}
+          </span>
+        </div>
+        <div class="contacts__group contact-group">
+          <h4 class="contact-group__title">
+            ЦЕНТРАЛЬНЫЙ ОТДЕЛ ПРОДАЖ:
+          </h4>
+          <span class="contact-group__value contact-group__value--adres">
+            <img src="assets/img/adres-icon2.svg" alt="">
+            {{ site_adress }}
+          </span>
+        </div>
+      </div>
+      <div class="flex__8 contacts__map">
+        <div id="contacts-map" class="contacts-map">
+        </div>
+        <span class="contacts__author-label author-label">
+          {{ about_label }}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="lines">
+    <div class="lines__wrapper container">
+        <span class="lines__line lines__line--black lines__line--1"></span>
+        <span class="lines__line lines__line--black lines__line--2"></span>
+        <span class="lines__line lines__line--black lines__line--3"></span>
+        <span class="lines__line lines__line--black lines__line--2"></span>
+        <span class="lines__line lines__line--black lines__line--1"></span>
+    </div>
+</div>
+</section>

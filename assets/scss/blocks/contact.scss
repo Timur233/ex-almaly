@@ -1,0 +1,55 @@
+.contacts {
+    &__map {
+        position: relative;
+    }
+
+    &__author-label {
+        position: absolute;
+        right: 40px;
+        bottom: 40px;
+        z-index: 1;
+        color: $text;
+    }
+}
+
+.contacts-map {
+    height: 400px;
+    width: 100%;
+}
+
+.contacts-info {padding-right: 40px;}
+
+.contacts__flex {
+    align-items: center;
+}
+
+.contact-group__title {
+    margin-bottom: 8px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.contact-group {
+    margin-bottom: 32px;
+}
+
+.contact-group__value {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    line-height: 1.4;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.contact-group__value > img {
+    width: 18px;
+    margin-top: 2px;
+}
+
+.contact-group__value--phone {
+    font-size: 44px;
+    font-weight: 100;
+    line-height: 1;
+}

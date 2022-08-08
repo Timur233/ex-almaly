@@ -1,0 +1,47 @@
+<header class="main-header">
+   <div class="container">
+      <div class="main-header__content">
+         <div class="main-header__menu-toggle">
+            <div class="menu-toggle header-toggle">
+               <span class="menu-toggle__line"></span>
+               <span class="menu-toggle__line"></span>
+               <span class="menu-toggle__line"></span>
+            </div>
+         </div>
+
+         <div class="navigate main-header__navigate">
+            <nav class="navigate__block">
+               <a href="#about-project" class="navigate__link">О ПРОЕКТЕ</a>
+               <a href="#advantages" class="navigate__link">ПРЕИМУЩЕСТВА</a>
+               <a href="#appartaments" class="navigate__link">ПЛАНИРОВКИ</a>
+            </nav>
+         </div>
+
+         <div class="logo-block main-header__logo">
+            <a href="">
+               <img src="https://cms.abpx.kz{{ site_logo.path }}" class="logo-block__img" alt="Exclusive Qurylys">
+               <img src="https://cms.abpx.kz{{ site_second_logo.path }}" class="logo-block__img--dark" alt="Exclusive Qurylys">
+            </a>
+         </div>
+
+         <div class="navigate main-header__navigate">
+            <nav class="navigate__block">
+               <a href="#comfort" class="navigate__link">ГАЛЕРЕЯ</a>
+               <a href="#building-steps" class="navigate__link">ХОД СТРОИТЕЛЬСТВА</a>
+               <a href="#callback" class="navigate__link">КОНТАКТЫ</a>
+            </nav>
+         </div>
+         
+         <div class="main-contact main-header__contact">
+            <div class="main-contact__block">
+               <a href="tel:{{ site_phone }}" onclick="" class="main-contact__phone">
+                  {{ site_phone }}
+               </a>
+               <span data-modal="#callback-modal" class="main-contact__callback-link">
+                  {{ translate['callback_title'] }}
+               </span>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>

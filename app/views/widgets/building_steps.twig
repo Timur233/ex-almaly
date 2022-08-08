@@ -1,0 +1,69 @@
+{% if building_steps is defined and building_steps is not empty %}
+    <section id="building-steps" class="building-steps section">
+        <div class="container">
+
+            <div class="flex">
+                <div class="flex__3 building-steps__title-block">
+                    <div class="section-title building-steps__title">
+                        <h2 class="section-title__h2">
+                            <strong>
+                                ХОД
+                                <br>
+                                &nbsp;&nbsp;
+                                СТРОИТЕЛЬСТВА
+                            </strong>
+                        </h2>
+                        <span class="building-steps__author-label author-label">
+                            Дома Вашей Мечты
+                        </span>
+                    </div>
+                </div>
+
+                <div class="flex__9">
+                    <div class="building-steps__swiper swiper-container">
+                        <div class="swiper-wrapper">
+                            {% for item in building_steps %}
+                                <div 
+                                    class="swiper-slide building-steps__slide" 
+                                    style="background-image: url('https://cms.abpx.kz{{ item.preview }}')"
+                                >
+                                    {% if item.gallery %}
+                                        <a 
+                                            class="building-steps__link" 
+                                            href="#" 
+                                            data-gallery-images="{% for img in item.gallery %}https://cms.abpx.kz{{ img.styles[0].path }}{% if loop.last == false  %},{% endif%}{% endfor %}"  
+                                            onclick="() => {frontend.lightBox(this.getAttribute('data-gallery-images')); return false}">
+                                            <div class="step-information">
+                                                <img src="assets/img/icons/360.svg" class="step-information__icon">
+                                                <h3 class="step-information__title">{{ translate[item.format_date.month] }} {{ item.format_date.year }}</h3>
+                                            </div>
+                                        </a>
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="building-steps__controll building-steps__controll--left">
+                            <img src="assets/img/icons/arrow.svg">
+                        </div>
+                        <div class="building-steps__controll building-steps__controll--right">
+                            <img src="assets/img/icons/arrow.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lines">
+            <div class="lines__wrapper container">
+                <span class="lines__line lines__line--black lines__line--1"></span>
+                <span class="lines__line lines__line--black lines__line--2"></span>
+                <span class="lines__line lines__line--black lines__line--3"></span>
+                <span class="lines__line lines__line--black lines__line--2"></span>
+                <span class="lines__line lines__line--black lines__line--1"></span>
+            </div>
+        </div>
+
+    </section>
+{% endif %}

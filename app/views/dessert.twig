@@ -1,0 +1,411 @@
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{{ site_title }}</title>
+    <link rel="shortcut icon" href="https://cms.abpx.kz/{{ site_favicon.path }}" type="image/png">
+    <link rel="stylesheet" href="{{ base_url }}assets/css/swiper.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="{{ base_url }}assets/css/mapbox-gl.css">
+    <link rel="stylesheet" href="{{ base_url }}assets/css/dessert.css?v=9">
+
+    {{ site_scripts_in_head|raw }}
+  
+  </head>
+  <body class="dessert-body">
+
+    {{ site_scripts_in_body|raw }}
+
+    <div class="container">
+        <div class="dessert">
+            <div class="dessert-quiz swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide dessert-quiz__item">
+                        <span class="dessert__sub-title">
+                            Добро пожаловать!
+                        </span>
+                        <div class="dessert__content">
+                            <p>
+                                Вас ожидает сладкое завершение вечера!
+                            </p>
+                            <p>
+                                Комплимент от компании Exclusive Qurylys.
+                            </p>
+                            <p>
+                                Состав: 
+                                <ul>
+                                    <li>Кусочки спелого Алматинского апорта</li>
+                                    <li>Натуральный мед, собранный в предгорьях Заилийского Алатау</li>
+                                    <li>Нежный крем-мусс</li>
+                                    <li>Нотки цитруса</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <span class="desert__ps">
+                            Сочетание этих уникальных вкусов перенесет Вас в живописный уголок
+                            нашего города! Ведь он вдохновлен природой и атмосферой закрытой 
+                            клубной <strong>резеденции "Exclusive Almaly"</strong>
+                        </span>
+                        <div class="dessert__content">
+                            <p>
+                                Наслаждайдесь приятным яблочным десертом "Алмалы"!
+                            </p>
+                        </div>
+                        <a class="btn btn--gradient btn-arrow first-step">
+                            Открыть еще один бонус 
+                            <i class="fas fa-gift"></i>
+                        </a>
+                    </div>
+                    <div class="swiper-slide dessert-quiz__item">
+                        <span class="dessert__sub-title">
+                            Добро пожаловать на официальный сайт<br> Exclusive Qurylys!
+                        </span>
+                        <div class="dessert__content">
+                            <p>
+                                Чтобы сделать вечер еще приятнее, мы подготовили для вас эксклюзивное предложение!
+                            </p>
+                        </div>
+                        <form class="callback-h__form dessert-form" action="#">
+                            <div class="input-group callback-h__group">
+                               <label class="callback-h__label" for="staticTopFormName">{{ translate['name'] }}</label>
+                               <input 
+                                  type="text" 
+                                  class="input-group__input" 
+                                  id="staticTopFormName" 
+                                  name="name" 
+                                  fieldname="Имя"
+                               >
+                            </div>
+             
+                            <div class="input-group callback-h__group">
+                               <label class="callback-h__label" for="staticTopFormPhone">{{ translate['phone'] }}</label>
+                               <input 
+                                  type="text" 
+                                  class="input-group__input" 
+                                  id="staticTopFormPhone" 
+                                  name="phone" 
+                                  fieldname="Телефон" 
+                                  required="required"
+                               >
+                            </div>
+             
+                            <div class="input-group callback-h__group">
+                               <button 
+                                  class="btn btn--gradient callback-h__btn second-step" 
+                                  onclick="frontend.form(this); return false"
+                               >
+                                  Получить персональное предложение
+                                  <i class="fas fa-arrow-right"></i>
+                               </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="swiper-slide dessert-quiz__item">
+                        <span class="dessert__sub-title">
+                            Спасибо!
+                        </span>
+                        <div class="dessert__content">
+                            <p>
+                                Персональное предложение будет направлено вам на указанные контактные данные.
+                            </p>
+                        </div>
+                        <a href="https://exin.kz/" class="btn btn--gradient btn-arrow">
+                            Смотреть проекты Exclusive Qurylys
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </body>
+
+  <script src="{{ base_url }}assets/js/swiper.min.js"></script>
+  <script src="{{ base_url }}assets/js/wow.min.js"></script>
+  <script src="{{ base_url }}assets/js/fslightbox.js"></script>
+  <script src="{{ base_url }}assets/js/mapbox-gl.js"></script>
+
+    <script>
+
+        const swiper = new Swiper('.dessert-quiz', {
+            simulateTouch: false,
+            slidesPerView: 1,
+            spaceBetween: 1,
+            noSwiping: false,
+            noSwipingClass: 'dessert-quiz__item',
+            onlyExternal: true,
+        });
+
+        const firstStepButton = document.querySelector('.first-step');
+        const scrollElement = document.querySelector('.dessert-body');
+
+        firstStepButton.addEventListener('click', () => {
+            swiper.slideTo(1);
+            scrollElement.scrollTo(0, 0);
+        });
+
+        const goToThirdStep = () => {
+            swiper.slideTo(2);
+            scrollElement.scrollTo(0, 0);
+        };
+
+        var translater = new Object({
+        count_rooms: "{{ translate['count_rooms'] }}",
+        floor: "{{ translate['floor'] }}",
+        square: "{{ translate['square'] }}",
+        download_plan: "{{ translate['download_plan'] }}",
+        leave_a_request: "{{ translate['leave_a_request'] }}",
+        no_valid_number: "{{ translate['no_valid_number'] }}",
+        multiplier: "{{ translate['multiplier'] }}",
+        multiplierX1: "{{ translate['multiplierX1'] }}"
+        })
+
+        var frontend = (function frontendModule() {
+
+        function authorMarker() {
+            console.log("%cExclusive Qurylys with Iskandarov Timur", "color:#fff; background-color:#7eb621; padding: 8px 15px; font-size: 14px; border-radius: 4px; text-align:center")
+        }
+
+        function fade(element) {
+            var op = 1;  // initial opacity
+            var timer = setInterval(function () {
+            if (op <= 0.1){
+                clearInterval(timer);
+                element.style.display = 'none';
+            } else if (op >= 1) {
+                
+            }
+            element.style.opacity = op;
+            element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+            op -= op * 0.16;
+            }, 0.1);
+        }
+
+        function inputGroupFocus() {
+            const groups = document.querySelectorAll('.callback-h__group:not(.callback-h__group--processed)');
+
+            Array.from(groups).forEach(group => {
+
+            const input = group.querySelector('input');
+            const label = group.querySelector('label');
+
+            if (input) {
+                input.addEventListener('focus', function () {
+                label.classList.add('callback-h__label--focus');
+                });
+
+                input.addEventListener('blur', function () {
+                if (this.value === '') label.classList.remove('callback-h__label--focus');
+                });
+            }
+
+            group.classList.add('callback-h__group--processed');
+            });
+        }
+
+        function phoneValidator(){
+
+            var phoneInputs = document.querySelectorAll('input[name="phone"]')
+            phoneInputs.forEach((el) => {
+            el.addEventListener('input', function (e) {
+                clearMessages()
+                let numberCodes = ['710','711','712','713','714','715','716','717','718','721','722','723','724','725','726','727','728','729','736','700','701','702','703','704','705','706','707','708','709','747','750','751','760','761','762','763','764','771','775','776','777','778']
+                let x = e.target.value.replace(/\D/g, '').match(/(^\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+
+                e.target.value = !x[3] ? "+" + x[1] + x[2] : "+" + x[1] + ' (' + x[2] + ') ' + x[3] + (x[4] ? '-' + x[4] : '') + (x[5] ? '-' + x[5] : '');
+
+                let errMess = document.createElement('span')
+                errMess.classList.add('input-err')
+                errMess.textContent = translater.no_valid_number
+
+                //console.log(numberCodes.indexOf(x[2]))
+                if (x[3] && ((x[1] != '7') || (numberCodes.indexOf(x[2]) == -1))) {
+                el.parentNode.appendChild(errMess)
+                } else {
+                clearMessages()
+                }
+
+            });
+            })
+
+        }
+
+        function validatePhoneNumber(number) {
+            if (number.match(/^\+\d{1} \(\d{3}\) \d{3}\-\d{2}\-\d{2}$/)) {
+            return true
+            } else {
+            return false
+            }
+        }
+
+        function clearMessages() {
+            let messAll = document.querySelectorAll('.input-err')
+            messAll.forEach((el) => {
+            el.remove()
+            })
+        }
+
+        function formValidator(element) {
+            let errors = false
+            let form = element.parentNode.parentNode
+            let inputs = form.querySelectorAll('input, textarea')
+            let userName = form.querySelector('[name="name"]')
+            let formQuery = new Object()
+
+            let preloader = document.createElement('div')
+            preloader.classList.add('form-preloader')
+            form.appendChild(preloader)
+
+            if (userName.value == '') {
+            let label = userName.parentNode.querySelector('.callback-h__label');
+
+            if (label) label.classList.add('callback-h__label--focus');
+            userName.value = 'Не указано';
+            }
+
+            inputs.forEach(function (el) {
+
+            if (el.hasAttribute("required") && el.value != "" || !el.hasAttribute("required") && el.value != "") {
+                let id = el.id
+                let name = el.getAttribute('fieldname')
+                let data = el.value
+                formQuery[''+id] = {name, data}
+            } else {
+                if (el.hasAttribute("required")) {
+                el.setAttribute('style', 'border-color: red;')
+                errors = true
+                }
+            }
+
+            if (el.name == 'phone') {
+                if (!validatePhoneNumber(el.value)) {
+                clearMessages()
+                let errMess = document.createElement('span')
+                errMess.classList.add('input-err')
+                errMess.textContent = translater.no_valid_number
+                el.parentNode.appendChild(errMess)
+                errors = true
+                } else {
+                clearMessages()
+                }
+            }
+
+            })
+
+            if (!errors) {
+            let user_data = collect_user_data()
+            formQuery = Object.assign(formQuery, user_data)
+            formSendData(formQuery, form)
+            } else {
+            preloader.remove()
+            }
+
+        }
+
+        function collect_user_data(){
+
+            const url = new URL(document.location.href)
+            let user_data = new Object()
+
+            //UTM DATA
+            if (url.searchParams.get('utm_source')) {
+            let name = 'utm_source'
+            let data = url.searchParams.get('utm_source')
+            user_data['utm_source'] = {name: name, data: data}
+            }
+
+            if (url.searchParams.get('utm_medium')) {
+            let name = 'utm_medium'
+            let data = url.searchParams.get('utm_medium')
+            user_data['utm_medium'] = {name: name, data: data}
+            }
+
+            if (url.searchParams.get('utm_campaign')) {
+            let name = 'utm_campaign'
+            let data = url.searchParams.get('utm_campaign')
+            user_data['utm_campaign'] = {name: name, data: data}
+            }
+
+            if (url.searchParams.get('utm_term')) {
+            let name = 'utm_term'
+            let data = url.searchParams.get('utm_term')
+            user_data['utm_term'] = {name: name, data: data}
+            }
+
+            if (url.searchParams.get('utm_content')) {
+            let name = 'utm_content'
+            let data = url.searchParams.get('utm_content')
+            user_data['utm_content'] = {name: name, data: data}
+            }
+
+            //UserAgent
+            if (window.navigator.userAgent) {
+            let name = 'userAgent'
+            let data = window.navigator.userAgent
+            user_data['userAgent'] = {name: name, data: data}
+            }
+
+            //Cookie
+            if (get_cookie('_ga')) {
+            let name = '_ga'
+            let data = get_cookie('_ga').split('.')
+            data = data[data.length - 2] + '.' + data[data.length - 1]
+            user_data['_ga'] = {name: name, data: data}
+            }
+
+            //GetCookie Function
+            function get_cookie ( cookie_name )
+            {
+            var results = document.cookie.match ( '(^|;) ?' + cookie_name + '=([^;]*)(;|$)' );
+
+            if ( results )
+                return ( unescape ( results[2] ) );
+            else
+                return null;
+            }
+
+            return user_data
+
+        }
+
+        async function formSendData(formQuery, form) {
+            let response = await fetch('/form/send', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(formQuery)
+            });
+            const preloader = form.querySelector('.form-preloader');
+
+            preloader.remove();
+
+            goToThirdStep();
+            
+        }
+        
+        function frontendReady() {
+            authorMarker();
+            inputGroupFocus();
+            phoneValidator();
+        }
+
+        return {
+            marker: authorMarker,
+            form: formValidator,
+            ready: frontendReady,
+        }
+
+        })();
+
+        document.addEventListener("DOMContentLoaded", ()=>{ frontend.ready() });
+
+    </script>
+
+  {{ site_scripts_in_footer|raw }}
+
+  </html>

@@ -1,0 +1,101 @@
+.air-menu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background-image: url('https://cms.abpx.kz/storage/uploads/2022/07/28/62e2726ea6aba3-Large.jpeg');
+    background-size: cover;
+    display: none;
+    transform: translateX(-120%);
+    transition: transform .4s ease-in;
+
+    &--show {
+        transform: translateX(0);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: -1;
+    }
+
+    &__flex {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &__header {
+        flex: 0 0 auto;
+    }
+
+    &__body {
+        flex: 1 1 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 100px;
+    }
+
+    &__list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: spacer(5);
+    }
+
+    &__item {
+        color: #fff;
+        font-size: 22px;
+        font-weight: 400;
+        transition: color .3s ease-in-out;
+
+        &:hover {
+            color: $accent-color;
+            text-decoration: underline;
+        }
+    }
+
+    &__logo {
+        margin-right: auto;
+    }
+
+    &__menu-toggle {
+        flex: 0 0 60px;
+    }
+
+    &__contact {
+        color: #fff;
+    }
+
+    &__footer {
+        flex: 0 0 auto;
+    }
+}
+
+.air-footer {
+    display: flex;
+    align-items: center;
+    padding: spacer(6) 0;
+    gap: spacer(20);
+    color: #fff;
+
+    & i {
+        color: $accent-color;
+        margin-right: spacer(2);
+    }
+
+    &__insta {
+        margin-left: auto;
+        font-size: 28px;
+    }
+
+}

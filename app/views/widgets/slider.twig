@@ -1,0 +1,63 @@
+<section id="home" class="main-slider">
+    
+    <div class="main-slider__swiper swiper-container">
+        <div class="swiper-wrapper main-slider__wrapper">
+            {% for slide in slider_items %}
+                <div 
+                    class="swiper-slide main-slider__slide" 
+                    style="background-image: 
+                        url('https://cms.abpx.kz{{ slide.children[2].settings.image.path }}')"
+                >
+                    <div class="main-slider__shadow"></div>
+                    <div class="main-slider__content">
+                        <div class="container">
+                            <div class="slider-content">
+                                <h1 class="slider-content__title animate__animated animate__fadeInUp">
+                                    {{ slide.children[0].settings.text|raw }}
+                                </h1>
+                                <div class="slider-content__body animate__animated animate__fadeInUp">
+                                    <p class="slider-content__accent-text">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        {{ site_adress }}
+                                    </p>
+                                    {{ slide.children[1].settings.text|raw }}
+                                </div>
+                                <a href="#appartaments" class="btn btn--gradient slider-content__button animate__animated animate__fadeInUp">
+                                    Квартиры
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span class="main-slider__author-label author-label">
+                        Exclusive Almaly
+                    </span>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="container">
+            <div class="main-slider__ex-link">
+                <a 
+                    href="https://exin.kz/"
+                    target="_blank"
+                >
+                    <img src="https://cms.abpx.kz{{ exin_logo.path }}" alt="Exclusive Qurylys">
+                </a>
+            </div>
+        </div>
+
+        <div class="main-slider__pagination"></div>
+    </div>
+
+    <div class="lines">
+        <div class="lines__wrapper container">
+            <span class="lines__line lines__line--1"></span>
+            <span class="lines__line lines__line--2"></span>
+            <span class="lines__line lines__line--3"></span>
+            <span class="lines__line lines__line--2"></span>
+            <span class="lines__line lines__line--1"></span>
+        </div>
+    </div>
+    
+</section>

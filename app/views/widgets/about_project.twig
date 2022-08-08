@@ -1,0 +1,50 @@
+<section id="about-project" class="about-project section">
+    <div class="container">
+        <div class="flex about-project__flex-block">
+            <div class="flex__5 about-project__left">
+                <div class="section-title">
+                    <h2 class="section-title__h2">
+                        {{ about_title|raw }}
+                    </h2>
+                </div>
+                <div class="about-project__desc">
+                    {{ about_desc|raw }}
+                </div>
+                <a href="https://cms.abpx.kz/{{ about_presintation }}" target="_blank" class="btn btn--black">
+                    Скачать презентацию
+                </a>
+
+                <span class="about-project__author-label author-label">
+                    {{ about_label }}
+                </span>
+
+            </div>
+            <div class="flex__7 about-project__right">
+                <div class="about-project__images">
+                    <img 
+                        class="about-project__image-one wow animate__fadeInUp"
+                        data-wow-duration="1.5s"
+                        src="https://cms.abpx.kz{{ about_image.path }}" 
+                        alt=""
+                    >
+                    <img 
+                        class="about-project__image-two wow animate__fadeInUp"
+                        data-wow-duration="1.7s"
+                        src="https://cms.abpx.kz{{ about_image_second.path }}" 
+                        alt=""
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lines">
+        <div class="lines__wrapper container">
+            <span class="lines__line lines__line--black lines__line--1"></span>
+            <span class="lines__line lines__line--black lines__line--2"></span>
+            <span class="lines__line lines__line--black lines__line--3"></span>
+            <span class="lines__line lines__line--black lines__line--2"></span>
+            <span class="lines__line lines__line--black lines__line--1"></span>
+        </div>
+    </div>
+</section>

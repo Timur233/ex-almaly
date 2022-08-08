@@ -1,0 +1,73 @@
+<div class="air-menu air-menu__container">
+    <div class="container air-menu__flex">
+        <div class="air-menu__header">
+            <div class="main-header__content">
+                <div class="air-menu__menu-toggle">
+                   <div class="menu-toggle menu-toggle--open" onclick="frontend.airMenu(); return false;">
+                      <span class="menu-toggle__line"></span>
+                      <span class="menu-toggle__line"></span>
+                      <span class="menu-toggle__line"></span>
+                   </div>
+                </div>
+       
+                <div class="logo-block air-menu__logo">
+                   <a href="">
+                      <img src="https://cms.abpx.kz/storage/uploads/2022/07/28/62e26eb00cc60logo.svg" class="logo-block__img" alt="Exclusive Qurylys">
+                      <img src="https://cms.abpx.kz/storage/uploads/2022/07/28/62e26eaff0bb8logo--dark.svg" class="logo-block__img--dark" alt="Exclusive Qurylys">
+                   </a>
+                </div>
+                
+                <div class="main-contact air-menu__contact">
+                   <div class="main-contact__block">
+                      <a href="tel:+7 727 416 2314" onclick="" class="main-contact__phone">
+                         +7 727 416 2314
+                      </a>
+                      <a href="#" data-modal="#callback-modal" class="main-contact__callback-link">
+                         Обратная связь
+                      </a>
+                   </div>
+                </div>
+             </div>
+        </div>
+
+        <div class="air-menu__body">
+            <div class="air-menu__list">
+                <a href="#" class="air-menu__item">Главная</a>
+                <a href="#" class="air-menu__item">О проекте</a>
+                <a href="#" class="air-menu__item">Преимущества</a>
+                <a href="#" class="air-menu__item">Планировки</a>
+                <a href="#" class="air-menu__item">Галерея</a>
+                <a href="#" class="air-menu__item">Ход строительства</a>
+                <a href="#" class="air-menu__item">Парк у дома</a>
+                <a href="#" class="air-menu__item">О Компании</a>
+                <a href="#" class="air-menu__item">Обратная связь</a>
+                <a href="#" class="air-menu__item">Контакты</a>
+            </div>
+        </div>
+
+        <div class="air-menu__footer air-footer">
+            <div class="air-footer__logo">
+                <a href="https://exin.kz/">
+                    <img src="https://cms.abpx.kz{{ exin_logo.path }}" alt="" class="air-footer__logo-img">
+                </a>
+            </div>
+            <div class="air-footer__phone">
+                <a href="tel:{{ site_phone }}">
+                    <i class="fas fa-phone"></i>
+                    {{ site_phone }}
+                </a>
+            </div>
+            <div class="air-footer__adress">
+                <span>
+                    <i class="fas fa-map-marker-alt"></i>
+                    {{ site_adress }}
+                </span>
+            </div>
+            <div class="air-footer__insta">
+                <a href="">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

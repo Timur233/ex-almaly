@@ -1,0 +1,119 @@
+@import "vars.scss";
+@import "reset.scss";
+@import "font.scss";
+@import "fontawesome.scss";
+@import "mixins.scss";
+@import "default.scss";
+@import "elements/grid.scss";
+@import "elements/buttons.scss";
+@import "elements/forms.scss";
+@import "elements/modal.scss";
+@import "elements/lines.scss";
+@import "elements/author-label.scss";
+@import "elements/air_menu.scss";
+@import "blocks/header.scss";
+@import "blocks/slider.scss";
+@import "blocks/about_project.scss";
+@import "blocks/advantages.scss";
+@import "blocks/appartaments.scss";
+@import "blocks/comfort.scss";
+@import "blocks/building_steps.scss";
+@import "blocks/park_almaly.scss";
+@import "blocks/about_developer.scss";
+@import "blocks/horisontal_callback.scss";
+@import "blocks/contact.scss";
+
+@import "ios.scss";
+
+.btn {
+    font-size: 16px !important;
+
+    @media (max-width: 720px) {
+        font-size: 14px !important;
+    }
+}
+
+.form-preloader {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.dessert-body {
+    background-image: url('https://cms.abpx.kz/storage/uploads/2022/07/28/62e2726e7c9e72-Large.jpeg');
+    background-size: cover;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        opacity: .8;
+        z-index: 1;
+    }
+}
+
+.dessert {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.dessert-quiz {
+    width: 600px;
+    overflow-y: auto;
+    padding: 40px 0;
+}
+
+.dessert-quiz__item {
+    color: #ffff;
+    font-size: 18px;
+    font-weight: 300;
+
+    @media (max-width: 720px) {
+        font-size: 16px;
+    }
+}
+
+.dessert__content > ul {
+    list-style: disc;
+}
+
+.dessert__sub-title {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.desert__ps {
+    font-style: italic;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.dessert__content > p {
+    margin-bottom: 0px;
+}
+
+.dessert__content {
+    margin-bottom: 24px;
+}
+
+.first-step {
+    color:#333;
+}
+
+.dessert-form .input-group__input {
+    color: #fff;
+    border-color: #fff;
+}
+
+.dessert-form {
+    margin-top: 50px;
+}

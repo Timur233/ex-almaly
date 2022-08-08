@@ -1,0 +1,52 @@
+<section id="appartaments" class="appartaments section">
+    <div class="container">
+        <div class="appartaments__title-block">
+            <div class="section-title appartaments__title">
+                <h2 class="section-title__h2">
+                    <strong>Элитные Таунхаусы</strong>
+                </h2>
+            </div>
+            <div class="appartaments__desc">
+                Это современный формат жизни в окружении природы в котором из 
+                каждой квартиры открывается <b>живописный вид</b> на пышную зелень, 
+                которая была сохранена при строительстве жилого комплекса на 
+                территории бывшего санатория <b>“Алмалы” </b>
+            </div>
+        </div>
+        <div class="appartaments__map">
+            {{ include('widgets/appartaments__polygons.twig') }}
+            
+            <img 
+                src="https://cms.abpx.kz/storage/uploads/2022/06/20/62b067f9f1f9dinterective-map__bg.png" 
+                class="appartaments__bg"
+                alt=""
+            >
+
+            <img 
+                src="https://cms.abpx.kz/storage/uploads/2022/06/20/62b0744a862e1appartaments__cloud.png"
+                class="appartaments__cloud appartaments__cloud--left wow animate__fadeInLeft"
+                data-wow-duration="2s"
+            >
+
+            <img 
+                src="https://cms.abpx.kz/storage/uploads/2022/06/20/62b0744a862e1appartaments__cloud.png"
+                class="appartaments__cloud appartaments__cloud--right wow animate__fadeInRight"
+                data-wow-duration="2.2s"
+            >
+
+            <span class="appartaments__author-label author-label">
+                Дом в стиле Eco-Luxury
+            </span>
+        </div>
+    </div>
+
+    <div class="lines">
+        <div class="lines__wrapper container">
+            <span class="lines__line lines__line--black lines__line--1"></span>
+            <span class="lines__line lines__line--black lines__line--2"></span>
+            <span class="lines__line lines__line--black lines__line--3"></span>
+            <span class="lines__line lines__line--black lines__line--2"></span>
+            <span class="lines__line lines__line--black lines__line--1"></span>
+        </div>
+    </div>
+</section>
