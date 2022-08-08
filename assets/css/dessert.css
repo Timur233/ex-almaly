@@ -5974,6 +5974,9 @@ footer.common-footer:before {
   .callback-h {
     background-attachment: inherit; } }
 
+body {
+  overflow: hidden; }
+
 .btn {
   font-size: 16px !important; }
   @media (max-width: 720px) {
@@ -6005,12 +6008,15 @@ footer.common-footer:before {
 .dessert {
   height: 100vh;
   display: flex;
-  align-items: center; }
-
-.dessert-quiz {
-  width: 600px;
+  align-items: center;
   overflow-y: auto;
   padding: 40px 0; }
+  @media (max-width: 720px) {
+    .dessert {
+      align-items: flex-start; } }
+
+.dessert-quiz {
+  width: 600px; }
 
 .dessert-quiz__item {
   color: #ffff;

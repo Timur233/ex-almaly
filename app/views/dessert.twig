@@ -138,10 +138,11 @@
             noSwiping: false,
             noSwipingClass: 'dessert-quiz__item',
             onlyExternal: true,
+            allowTouchMove: false,
         });
 
         const firstStepButton = document.querySelector('.first-step');
-        const scrollElement = document.querySelector('.dessert-body');
+        const scrollElement = document.querySelector('.dessert');
 
         firstStepButton.addEventListener('click', () => {
             swiper.slideTo(1);
