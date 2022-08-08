@@ -5,8 +5,8 @@
 
     class Model_Form extends Model
     {
-        function send_form ($lang = 'ru', $form_body) {	
-            return Model::fetch('https://cms.abpx.kz/api/forms/submit/' . FORM_NAME, $form_body);
+        function send_form ($lang = 'ru', $form_body, $form_name = FORM_NAME) {	
+            return Model::fetch('https://cms.abpx.kz/api/forms/submit/' . $form_name, $form_body);
         }
     }
 ?>

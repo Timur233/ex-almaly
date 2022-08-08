@@ -7,6 +7,7 @@
     use app\core\View;
 
     include "app/models/model_main.php";
+    include "app/models/model_form.php";
     include "app/models/model_building_steps.php";
 
     class Controller_Dessert extends Controller
@@ -20,6 +21,16 @@
             endif;
 
             View::generate('dessert.twig', $data);
+        }
+
+        function action_form() {
+            $form_body = [];
+            
+            foreach ($this->query as $input) {
+                $form_body['form'][$input['name']] = $input['data'];
+            }
+
+            return self::render_responce(Model_Form::send_form(LANG, $form_body, 'almalyformdessert'));
         }
         
     }
