@@ -10,9 +10,11 @@
                 <div class="about-project__desc">
                     {{ about_desc|raw }}
                 </div>
-                <a href="https://cms.abpx.kz/{{ about_presintation }}" target="_blank" class="btn btn--black">
-                    Скачать презентацию
-                </a>
+                {% if about_presintation %}
+                    <a href="https://cms.abpx.kz/{{ about_presintation }}" target="_blank" class="btn btn--black">
+                        Скачать презентацию
+                    </a>
+                {% endif %}
 
                 <span class="about-project__author-label author-label">
                     {{ about_label }}
