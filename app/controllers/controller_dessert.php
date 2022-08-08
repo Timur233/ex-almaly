@@ -4,6 +4,7 @@
     use app\core\Controller;
     use app\models\Model_Building_Steps;
     use app\models\Model_Main;
+    use app\models\Model_Form;
     use app\core\View;
 
     include "app/models/model_main.php";
@@ -16,7 +17,7 @@
         function __construct() {
             $this->query = json_decode(file_get_contents('php://input'), true);
         }
-        
+
         function action_index() {
             $data = Model_Main::get_data(LANG);	
             $data['footer']	= Model_Main::get_footer(LANG);
@@ -35,7 +36,7 @@
                 $form_body['form'][$input['name']] = $input['data'];
             }
 
-            return self::render_responce(Model_Form::send_form(LANG, $form_body, 'almalyformdessert'));
+            return Model_Form::send_form(LANG, $form_body, 'almalyformdessert');
         }
         
     }
