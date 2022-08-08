@@ -49,6 +49,7 @@ body {
 .dessert-body {
     background-image: url('https://cms.abpx.kz/storage/uploads/2022/07/28/62e2726e7c9e72-Large.jpeg');
     background-size: cover;
+    padding: 40px 0;
 
     &::before {
         content: '';
@@ -68,7 +69,6 @@ body {
     display: flex;
     align-items: center;
     overflow-y: auto;
-    padding: 40px 0;
 
     @media (max-width: 720px) {
         align-items: flex-start;

@@ -5993,7 +5993,8 @@ body {
 
 .dessert-body {
   background-image: url("https://cms.abpx.kz/storage/uploads/2022/07/28/62e2726e7c9e72-Large.jpeg");
-  background-size: cover; }
+  background-size: cover;
+  padding: 40px 0; }
   .dessert-body::before {
     content: '';
     position: absolute;
@@ -6009,8 +6010,7 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
-  overflow-y: auto;
-  padding: 40px 0; }
+  overflow-y: auto; }
   @media (max-width: 720px) {
     .dessert {
       align-items: flex-start; } }
