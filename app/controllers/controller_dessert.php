@@ -12,6 +12,11 @@
 
     class Controller_Dessert extends Controller
     {
+
+        function __construct() {
+            $this->query = json_decode(file_get_contents('php://input'), true);
+        }
+        
         function action_index() {
             $data = Model_Main::get_data(LANG);	
             $data['footer']	= Model_Main::get_footer(LANG);
