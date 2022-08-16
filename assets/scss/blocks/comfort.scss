@@ -18,6 +18,10 @@
         align-items: center;
         justify-content: flex-end;
 
+        @media (max-width: 520px) {
+            height: 400px;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -46,6 +50,10 @@
         width: 70%;
         padding: spacer(10) spacer(6);
         margin-bottom: -80px;
+
+        @media (max-width: 720px) {
+            width: 90%;
+        }
     }
 
     &__item-sub-title {
@@ -58,6 +66,10 @@
     &__item-title {
         font-size: 18px;
         font-weight: 500;
+
+        @media (max-width: 720px) {
+            font-size: 16px;
+        }
     }
 
     &__author-label {
@@ -71,6 +83,11 @@
 
         @media (max-width: 1440px) {
             font-size: 54px;
+        }
+
+        @media (max-width: 520px) {
+            top: 45%;
+            font-size: 44px;
         }
     }
 }

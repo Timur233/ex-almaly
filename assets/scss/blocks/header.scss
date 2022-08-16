@@ -60,15 +60,35 @@
 
     &__menu-toggle {
         flex: 0 0 10%;
+        
+        @media (max-width: 1385px) {
+            flex: 0 0 12%;
+        }
+        
+        @media (max-width: 1160px) {
+            flex: 0 0 30%;
+        }
     }
 
     &__contact {
         flex: 0 0 10%;
+        
+        @media (max-width: 1385px) {
+            flex: 0 0 12%;
+        }
+        
+        @media (max-width: 1160px) {
+            flex: 0 0 30%;
+        }
     }
 
     &__logo {
         flex: 0 0 6%;
         justify-content: center;
+
+        @media (max-width: 1160px) {
+            display: none;
+        }
     }
 
     &__logos {
@@ -77,9 +97,13 @@
 
     &__navigate {
         flex: 0 0 35%;
+        
+        @media (max-width: 1385px) {
+            flex: 0 0 34%;
+        }
 
-        @media (max-width: 1240px) {
-            margin-right: spacer(5);
+        @media (max-width: 1160px) {
+            display: none;
         }
     }
 
@@ -137,13 +161,17 @@
     &__img{
         height: 68px;
 
-        @media (max-width: 1240px) {
-            height: 48px;
-        }
-
         &--dark {
             height: 68px;
             display: none;
+        }
+
+        @media (max-width: 520px) {
+            height: 58px;
+
+            &--dark {
+                height: 58px;
+            }
         }
     }
 }
@@ -184,17 +212,9 @@
             color: $orange;
         }
 
-        @media (max-width: 1240px) {
-            margin-right: spacer(4);
-        }
-
         @media (max-width: 1120px) {
             font-size: 14px;
         }
-    }
-
-    @media (max-width: 1060px) {
-        display: none;
     }
 }
 
@@ -218,9 +238,5 @@
         text-decoration: underline;
         text-transform: lowercase;
         cursor: pointer;
-    }
-
-    @media (max-width: 830px) {
-        display: none;
     }
 }

@@ -1,4 +1,11 @@
 .about-developer {
+
+    @media (max-width: 520px) {
+        background-color: #f9f9f9;
+        z-index: 0;
+        padding: 80px 0;
+    }
+
     &__block {
         margin-bottom: 64px;
     }
@@ -14,6 +21,10 @@
         justify-content: center;
         margin-bottom: 32px;
 
+        @media (max-width: 520px) {
+            gap: spacer(8);
+        }
+
         & > a {
             display: block;
             text-align: center;
@@ -24,17 +35,43 @@
             width: 85%;
         }
     }
+
+    &__info {
+        @media (max-width: 720px) {
+            width: 100%;
+            margin-bottom: spacer(12);
+        }
+    }
+
+    &__items {
+        @media (max-width: 720px) {
+            width: 100%;
+        }
+    }
 }
 
 .about-adv {
     display: flex;
     align-self: center;
+        
+    @media (max-width: 720px) {
+        flex-direction: column;
+    }
 
     &__item {
         flex: 0 1 50%;
         width: 50%;
         display: flex;
         align-items: flex-start;
+        
+        @media (max-width: 720px) {
+            flex: 0 0 100%;
+            width: 100%;
+
+            &:first-child {
+                margin-bottom: spacer(12);
+            }
+        }
     }
 
     &__number {
@@ -45,11 +82,19 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-right: 28px;
+
+        @media (max-width: 520px) {
+            position: absolute;
+        }
     }
 
     &__title {
         line-height: 1.4;
         margin-bottom: 16px;
+
+        @media (max-width: 520px) {
+            padding-left: 85px;
+        }
     }
 
     &__text {

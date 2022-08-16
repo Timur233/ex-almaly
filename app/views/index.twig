@@ -1,7 +1,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1400">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>{{ site_title }}</title>
     <link rel="shortcut icon" href="https://cms.abpx.kz/{{ site_favicon.path }}" type="image/png">
@@ -201,7 +201,7 @@
         el.style.backgroundSize = 'cover';
         el.style.width = '90px';
         el.style.height = '107.84px';
-        el.style.marginTop = '-107.84px';
+        el.style.marginTop = '0px';
 
         var marker = new mapboxgl.Marker(el)
           .setLngLat([76.948295,43.24968657450528])
@@ -346,6 +346,17 @@
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           },
+          breakpoints: {
+            830: {
+              slidesPerView: 4,
+            },
+            500: {
+              slidesPerView: 2,
+            },
+            0: {
+              slidesPerView: 1,
+            }
+          },
           on: {
             click: function (e) {
               toggleEl(this.slides[lastIndex]);
@@ -402,6 +413,19 @@
           pagination: {
             el: ".swiper-pagination",
           },
+          breakpoints: {
+          980: {
+            slidesPerView: 1.6,
+          },
+          720: {
+            slidesPerView: 1.1,
+            spaceBetween: 16,
+          },
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 16,
+          }
+        },
           on: {
             afterInit: function() {
               showContent(this);
@@ -413,6 +437,32 @@
         });
 
       }
+
+      function appartamentsCarousel() {
+
+        let galery = new Swiper('.appartaments__swiper', {
+          loop: true,
+          slidesPerView: 2,
+          initialSlide: 0,
+          keyboardControl: false,
+          mousewheelControl: false,
+          autoHeight: true,
+          spaceBetween: 20,
+          navigation: {
+            nextEl: ".appartaments__swiper-controll--right",
+            prevEl: ".appartaments__swiper-controll--left",
+          },
+          breakpoints: {
+            520: {
+              slidesPerView: 2,
+            },
+            0: {
+              slidesPerView: 1.4
+            }
+          }
+        })
+
+        };
 
       function galleryCarousel() {
 
@@ -438,7 +488,7 @@
           }
         })
 
-      }
+      };
 
       function mainSliderCarousel() {
         let title, content, button = null;
@@ -1409,6 +1459,7 @@
         correctStikyHeader();
         sideBarToggleBtnEvent();
         siteMap();
+        appartamentsCarousel();
 
         wow = new WOW({
           boxClass:     'wow',      

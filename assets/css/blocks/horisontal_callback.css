@@ -1,5 +1,8 @@
 .callback-h {
   text-align: center; }
+  @media (max-width: 520px) {
+    .callback-h {
+      padding-top: 80px; } }
   .callback-h__label {
     position: absolute;
     left: 0px;
@@ -14,5 +17,8 @@
     margin-bottom: 44px; }
   .callback-h__flex {
     justify-content: center; }
+    @media (max-width: 520px) {
+      .callback-h__flex > .flex__6 {
+        width: 90%; } }
   .callback-h__title {
     margin-bottom: 44px; }

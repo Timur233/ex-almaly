@@ -8,6 +8,10 @@
     opacity: .6;
     pointer-events: none;
 
+    @media (max-width: 520px) {
+        opacity: .205;
+    }
+
     &__wrapper {
         display: flex;
         flex-direction: row;

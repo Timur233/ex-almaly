@@ -15,6 +15,10 @@
         $slow-animation box-shadow;
     user-select: none;
 
+    @media (max-width: 520px) {
+        font-size: 16px;
+    }
+
     &:hover {
         background-color: lighten($blue, 5);
         border-color: lighten($blue, 5);

@@ -1,6 +1,20 @@
 .contacts {
+    &__info {
+        @media (max-width: 720px) {
+            width: 100%;
+            flex: 0 0 100%;
+            margin-bottom: spacer(12);
+            padding: 0 !important;
+        }
+    }
+
     &__map {
         position: relative;
+
+        @media (max-width: 720px) {
+            width: 100%;
+            flex: 0 0 100%;
+        }
     }
 
     &__author-label {
@@ -9,6 +23,12 @@
         bottom: 40px;
         z-index: 1;
         color: $text;
+        line-height: 1;
+    
+        @media (max-width: 980px) {
+            right: 30px;
+            bottom: 10px;
+        }
     }
 }
 
@@ -17,7 +37,9 @@
     width: 100%;
 }
 
-.contacts-info {padding-right: 40px;}
+.contacts-info {
+    padding-right: 40px;
+}
 
 .contacts__flex {
     align-items: center;
@@ -32,6 +54,10 @@
 
 .contact-group {
     margin-bottom: 32px;
+
+    @media (max-width: 720px) {
+        margin-bottom: 48px;
+    }
 }
 
 .contact-group__value {
@@ -52,4 +78,8 @@
     font-size: 44px;
     font-weight: 100;
     line-height: 1;
+
+    @media (max-width: 980px) {
+        font-size: 28px;
+    }
 }

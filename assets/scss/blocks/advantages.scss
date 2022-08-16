@@ -11,6 +11,10 @@
         z-index: 1;
         transition: width 0.44s ease-out;
 
+        @media (max-width: 830px) {
+            height: 550px;
+        }
+
         &::before {
             content: '';
             position: absolute;

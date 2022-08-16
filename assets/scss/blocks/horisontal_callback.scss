@@ -1,6 +1,10 @@
 .callback-h {
     text-align: center;
 
+    @media (max-width: 520px) {
+        padding-top: 80px;
+    }
+
     &__label {
         position: absolute;
         left: 0px;
@@ -21,6 +25,12 @@
 
     &__flex {
         justify-content: center;
+
+        & > .flex__6 {
+            @media (max-width: 520px) {
+                width: 90%;
+            }
+        }
     }
 
     &__title {
