@@ -56,6 +56,10 @@
         & .menu-toggle__line {
             background-color: $text;
         }
+
+        & .main-contact__mobile {
+            filter: invert(1);
+        }
     }
 
     &__menu-toggle {

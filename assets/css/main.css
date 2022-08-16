@@ -4802,7 +4802,8 @@ body {
         line-height: 1.3; } }
     @media (max-width: 520px) {
       .section-title__h2 {
-        font-size: 36px; } }
+        font-size: 36px;
+        font-weight: 300; } }
   .section-title__control {
     display: flex;
     position: relative;
@@ -4978,7 +4979,7 @@ footer.common-footer:before {
     background-color: #ffffff; }
     @media (max-width: 830px) {
       .modal__content {
-        padding: 24px 24px; } }
+        padding: 40px 40px; } }
   .modal .callback-h__title {
     text-align: center; }
     .modal .callback-h__title > h2 {
@@ -5168,6 +5169,8 @@ footer.common-footer:before {
       filter: invert(0.8); }
     .main-header--sticky .menu-toggle__line {
       background-color: #2C1F3D; }
+    .main-header--sticky .main-contact__mobile {
+      filter: invert(1); }
   .main-header__menu-toggle {
     flex: 0 0 10%; }
     @media (max-width: 1385px) {
@@ -5314,7 +5317,8 @@ footer.common-footer:before {
       height: 130vh; } }
   @media (max-width: 520px) {
     .main-slider {
-      height: 120vh; } }
+      height: 120vh;
+      max-height: 840px; } }
   .main-slider__swiper {
     position: relative;
     width: 100%;
@@ -5544,6 +5548,9 @@ footer.common-footer:before {
   @media (max-width: 830px) {
     .advantages__slide {
       height: 550px; } }
+  @media (max-width: 520px) {
+    .advantages__slide {
+      height: 480px; } }
   .advantages__slide::before {
     content: '';
     position: absolute;
@@ -5828,6 +5835,11 @@ footer.common-footer:before {
     @media (max-width: 720px) {
       .comfort__body {
         width: 90%; } }
+    @media (max-width: 520px) {
+      .comfort__body {
+        width: 95%;
+        padding: 28px 16px;
+        margin-bottom: -100px; } }
   .comfort__item-sub-title {
     display: block;
     font-size: 16px;
@@ -6013,7 +6025,7 @@ footer.common-footer:before {
       top: 36%; } }
   @media (max-width: 520px) {
     .park-almaly__controll {
-      top: 30%; } }
+      top: 240px; } }
   .park-almaly__controll--left {
     transform: scale(-1);
     margin-right: 12px;
@@ -6202,6 +6214,9 @@ footer.common-footer:before {
   @media (max-width: 980px) {
     .contact-group__value--phone {
       font-size: 28px; } }
+  @media (max-width: 520px) {
+    .contact-group__value--phone {
+      font-weight: 300; } }
 
 @supports (-webkit-touch-callout: none) {
   .callback-h {

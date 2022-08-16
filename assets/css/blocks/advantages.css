@@ -12,6 +12,9 @@
   @media (max-width: 830px) {
     .advantages__slide {
       height: 550px; } }
+  @media (max-width: 520px) {
+    .advantages__slide {
+      height: 480px; } }
   .advantages__slide::before {
     content: '';
     position: absolute;
