@@ -5282,6 +5282,9 @@ footer.common-footer:before {
   font-size: 18px;
   font-weight: 500;
   line-height: 1; }
+  @media (max-width: 483px) {
+    .main-contact__phone {
+      display: none; } }
 
 .main-contact__callback-link {
   font-size: 14px;
@@ -5290,6 +5293,17 @@ footer.common-footer:before {
   text-decoration: underline;
   text-transform: lowercase;
   cursor: pointer; }
+  @media (max-width: 483px) {
+    .main-contact__callback-link {
+      display: none; } }
+
+.main-contact__mobile {
+  display: none; }
+  .main-contact__mobile > img {
+    height: 28px; }
+  @media (max-width: 483px) {
+    .main-contact__mobile {
+      display: block; } }
 
 .main-slider {
   position: relative;
@@ -5298,6 +5312,9 @@ footer.common-footer:before {
   @media (max-width: 830px) {
     .main-slider {
       height: 130vh; } }
+  @media (max-width: 520px) {
+    .main-slider {
+      height: 120vh; } }
   .main-slider__swiper {
     position: relative;
     width: 100%;
@@ -5428,6 +5445,9 @@ footer.common-footer:before {
 
 .about-project {
   padding-top: 160px; }
+  @media (max-width: 520px) {
+    .about-project {
+      padding-top: 80px; } }
   .about-project__desc {
     margin-bottom: 44px; }
     .about-project__desc ul {
@@ -5464,6 +5484,9 @@ footer.common-footer:before {
   .about-project__image-one {
     max-width: 70%;
     margin-bottom: 80px; }
+    @media (max-width: 520px) {
+      .about-project__image-one {
+        max-width: 80%; } }
   .about-project__image-two {
     position: absolute;
     bottom: 0;
@@ -5471,6 +5494,9 @@ footer.common-footer:before {
     @media (max-width: 980px) {
       .about-project__image-two {
         width: 250px; } }
+    @media (max-width: 520px) {
+      .about-project__image-two {
+        width: 190px; } }
   .about-project__author-label {
     color: #2C1F3D;
     display: block;
@@ -5664,7 +5690,7 @@ footer.common-footer:before {
     margin-bottom: 16px;
     font-size: 20px; }
   .appartaments-slide__params {
-    margin-bottom: 0 !important; }
+    margin-bottom: 16px !important; }
     .appartaments-slide__params > dl {
       font-size: 16px !important;
       justify-content: space-between;
@@ -5764,6 +5790,9 @@ footer.common-footer:before {
   .comfort__title {
     text-align: center;
     margin-bottom: 40px; }
+    @media (max-width: 520px) {
+      .comfort__title > h2 {
+        font-size: 28px; } }
   .comfort__swiper {
     overflow: visible; }
   .comfort__slide {

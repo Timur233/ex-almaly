@@ -229,6 +229,10 @@
         font-size: 18px;
         font-weight: 500;
         line-height: 1;
+
+        @media (max-width: 483px) {
+            display: none;
+        }
     }
 
     &__callback-link {
@@ -238,5 +242,21 @@
         text-decoration: underline;
         text-transform: lowercase;
         cursor: pointer;
+
+        @media (max-width: 483px) {
+            display: none;
+        }
+    }
+
+    &__mobile {
+        display: none;
+
+        & > img {
+            height: 28px;
+        }
+
+        @media (max-width: 483px) {
+            display: block;
+        }
     }
 }

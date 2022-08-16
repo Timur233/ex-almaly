@@ -7,6 +7,10 @@
         height: 130vh;
     }
 
+    @media (max-width: 520px) {
+        height: 120vh;
+    }
+
     &__swiper {
         position: relative;
         width: 100%;
