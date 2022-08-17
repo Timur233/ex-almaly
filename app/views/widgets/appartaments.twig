@@ -42,11 +42,18 @@
             <div class="swiper-wrapper">
                 {% for item in offers.entries %}
                     <div class="swiper-slide appartaments-slide">
-                        <img 
-                            src="https://cms.abpx.kz{{ item.plan[0].path }}" 
-                            alt="{{ item.title }}" 
+                        <a 
+                            href="#" 
                             class="appartaments-slide__img"
+                            onclick="frontend.lightBox(this.getAttribute('data-gallery-images')); return false"
+                            data-gallery-images="{% for image in item.plan %}https://cms.abpx.kz{{ image.path }},{% endfor %}"
+                            onclick="frontend.lightBox(this.getAttribute('data-gallery-images')); return false"
                         >
+                            <img 
+                                src="https://cms.abpx.kz{{ item.plan[0].path }}" 
+                                alt="{{ item.title }}"
+                            >
+                        </a>
                         <h3 class="appartaments-slide__title">
                             {{ item.title }}
                         </h3>

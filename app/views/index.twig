@@ -328,8 +328,12 @@
           if (!el) return;
           const elContent = el.querySelector('.advantages__body');
           const isActive = el.classList.contains('advantages__slide--active');
+          const windowWidth = window.offsetWidth;
 
-          el.style.width = (!isActive ? el.offsetWidth * 2 : el.offsetWidth / 2) + 'px';
+          if (windowWidth >= 500) {
+            el.style.width = (!isActive ? el.offsetWidth * 2 : el.offsetWidth / 2) + 'px';
+          }
+          
           setTimeout(() => {
             elContent.style.height = !isActive ? elContent.scrollHeight : 0;
           }, 280)
@@ -349,12 +353,15 @@
           breakpoints: {
             830: {
               slidesPerView: 4,
+              spaceBetween: 1,
             },
             500: {
               slidesPerView: 2,
+              spaceBetween: 1,
             },
             0: {
-              slidesPerView: 1,
+              slidesPerView: 1.1,
+              spaceBetween: 16
             }
           },
           on: {
@@ -545,11 +552,17 @@
 
       function creiateLightbox(data) {
 
-        var lightbox = new FsLightbox()
-        data = data.split(',')
-        lightbox.props.sources = data
-        lightbox.props.onInit
-        lightbox.open()
+        var lightbox = new FsLightbox();
+
+        data = data.split(',');
+
+        if (data[data.length - 1] === '') {
+          data.splice(data.length - 1, 1);
+        }
+
+        lightbox.props.sources = data;
+        lightbox.props.onInit;
+        lightbox.open();
 
       }
 

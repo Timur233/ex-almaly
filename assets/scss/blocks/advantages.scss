@@ -72,6 +72,11 @@
         overflow: hidden;
         z-index: 1;
         transition: height .3s;
+        
+        @media (max-width: 520px) {
+            font-size: 14px;
+            line-height: 1.35;
+        }
 
         & > ul {
             list-style: disc;

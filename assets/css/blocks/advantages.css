@@ -58,6 +58,10 @@
   overflow: hidden;
   z-index: 1;
   transition: height .3s; }
+  @media (max-width: 520px) {
+    .advantages__body {
+      font-size: 14px;
+      line-height: 1.35; } }
   .advantages__body > ul {
     list-style: disc;
     margin-top: 0; }

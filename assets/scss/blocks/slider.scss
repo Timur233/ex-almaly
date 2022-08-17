@@ -35,6 +35,10 @@
         gap: 4px;
         text-align: center;
 
+        @media (max-width: 520px) {
+            margin-right: -16px;
+        }
+
         & > .swiper-pagination-bullet {
             width: auto !important;
             height: auto !important;
