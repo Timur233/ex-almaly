@@ -5323,7 +5323,7 @@ footer.common-footer:before {
   align-items: flex-end; }
 
 .main-contact__phone {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
   line-height: 1; }
   @media (max-width: 483px) {
