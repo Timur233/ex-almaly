@@ -1,5 +1,72 @@
-<section id="about-project" class="about-project section">
+<section id="about-project" class="about-project section section--pt" ref="aboutProject">
+    <img 
+        src="https://cms.abpx.kz/storage/uploads/2022/11/08/636a05c22151adetails-img-2.svg"
+        class="about-project__paralax section__paralax"
+        :style="{transform: paralaxEffect?.paralax?.about_project}"
+    >
+
     <div class="container">
+        <div class="about-project__images about-images">
+            <div class="about-images__left">
+                <img class="about-images__img" src="https://cms.abpx.kz{{ about_image_1.path }}">
+            </div>
+            <div class="about-images__right">
+                <img class="about-images__img" src="https://cms.abpx.kz{{ about_image_2.path }}">
+            </div>
+        </div>
+
+        <div class="about-details">
+            <img 
+                src="https://cms.abpx.kz/storage/uploads/2022/11/08/636a03f9d31d4details-img-1.svg" 
+                alt="" class="about-details__paralax"
+            >
+
+            <div class="flex">
+                <div class="flex__8 about-details__left">
+                    <div class="flex">
+                        {% for item in about_list_1 %}
+                            <div class="flex__3 about-details__item detail-item">
+                                <span class="detail-item__sub-title">
+                                    {{ item.children[0].settings.text|raw }}
+                                </span>
+                                <span class="detail-item__title">
+                                    {{ item.children[1].settings.text|raw }}
+                                </span>
+                                <span class="detail-item__sub-title">
+                                    {{ item.children[2].settings.text|raw }}
+                                </span>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="flex__4 about-details__right">
+                    <div class="flex">
+                        {% for item in about_list_2 %}
+                            <div class="flex__6 about-details__item detail-item">
+                                <span class="detail-item__sub-title">
+                                    {{ item.children[0].settings.text|raw }}
+                                </span>
+                                <span class="detail-item__title">
+                                    {{ item.children[1].settings.text|raw }}
+                                </span>
+                                <span class="detail-item__sub-title">
+                                    {{ item.children[2].settings.text|raw }}
+                                </span>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-project__images about-images">
+            <div class="about-images__right">
+                <img class="about-images__img" src="https://cms.abpx.kz{{ about_image_4.path }}">
+            </div>
+            <div class="about-images__left">
+                <img class="about-images__img" src="https://cms.abpx.kz{{ about_image_3.path }}">
+            </div>
+        </div>
         <div class="flex about-project__flex-block">
             <div class="flex__5 about-project__left">
                 <div class="section-title">
@@ -37,16 +104,6 @@
                     >
                 </div>
             </div>
-        </div>
-    </div>
-
-    <div class="lines">
-        <div class="lines__wrapper container">
-            <span class="lines__line lines__line--black lines__line--1"></span>
-            <span class="lines__line lines__line--black lines__line--2"></span>
-            <span class="lines__line lines__line--black lines__line--3"></span>
-            <span class="lines__line lines__line--black lines__line--2"></span>
-            <span class="lines__line lines__line--black lines__line--1"></span>
         </div>
     </div>
 </section>

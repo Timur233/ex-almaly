@@ -1,0 +1,39 @@
+<section 
+   id="callback" 
+   class="callback-h section section--primary"
+   ref="mainCallback"
+>
+   <img 
+       class="section__paralax section__paralax--primary" 
+       src="https://cms.abpx.kz/storage/uploads/2022/10/19/634fda74b60e6order-img-3.svg"
+       :style="{transform: paralaxEffect?.paralax?.main_callback}"
+   >
+   <img 
+       class="section__paralax section__paralax--second" 
+       src="https://cms.abpx.kz/storage/uploads/2022/10/20/63512b3579128order-img-1.svg"
+       :style="{transform: paralaxEffect?.paralax?.main_callback_two}"
+   >
+   <img 
+       class="section__paralax callback-h__paralax" 
+       src="https://cms.abpx.kz/storage/uploads/2022/11/08/636a4d8826e56order-img-2.svg"
+       :style="{transform: paralaxEffect?.paralax?.main_callback_three}"
+   >
+   <div class="container">
+      <div class="section__title-block callback-h__title-block">
+         <h2 class="section__title section__title--gold">
+            Оставьте заявку и наш менеджер<br> 
+            обязательно с вами свяжется
+         </h2>
+      </div>
+      <div class="flex">
+         <div class="flex__8">
+            <callback-form class="callback-h__form"
+               :user-name-placeholder="'Имя'"
+               :no-valid-phone-number="'Пожалуйста, проверьте, правильность введённого вами номера!'"
+               :no-valid-form-data="'Не заполнены обязательные поля'"
+               :submit-text="'Отправить заявку'"
+            ></callback-form>
+         </div>
+      </div>
+   </div>
+</section>

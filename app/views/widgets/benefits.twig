@@ -1,0 +1,37 @@
+{% if benefits %}
+    <section class="section benefits">
+        <div class="container">
+            {% if benefits_title %}
+                <div class="section__title-block">
+                    <h2 class="section__title">{{ benefits_title }}</h2>
+                </div>
+            {% endif %}
+            <benefits-swiper>
+                {% for item in benefits_list %}
+                    <swiper-slide class="benefits__item benefit-item flex">
+                        <div class="benefit-item__info flex__7">
+                            <h3 class="benefit-item__title">
+                                {{ item.children[0].settings.text }}
+                            </h3>
+                            {{ item.children[1].settings.text|raw }}
+
+                            <div class="benefit-item__index">
+                                {% if loop.index < 9 %}
+                                    0{{ loop.index }}<sub>/{{ benefits_list|length }}</sub>
+                                {% else %}
+                                    {{ loop.index }}<sub>/{{ benefits_list|length }}</sub>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="benefit-item__image flex__5">
+                            <img 
+                                src="https://cms.abpx.kz{{ item.children[2].settings.image.path }}" 
+                                alt=""
+                            >
+                        </div>
+                    </swiper-slide>
+                {% endfor %}
+            </benefits-swiper>
+        </div>
+    </section>
+{% endif %}

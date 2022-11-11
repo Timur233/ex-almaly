@@ -1,0 +1,32 @@
+{% if gallery %}
+    <section class="section gallery">
+        <div class="container">
+            {% if gallery_title %}
+                <div class="section__title-block">
+                    <h2 class="section__title">{{ gallery_title }}</h2>
+                </div>
+            {% endif %}
+            <carousel-swiper 
+                :per-view="2" 
+                :is-loop="true"
+                class="gallery-items"
+            >
+                {% for item in gallery_items %}
+                    <swiper-slide 
+                        class="gallery-items__one" 
+                        @click="showLightBox(
+                            ['https://cms.abpx.kz{{ item.path }}']
+                        )"
+                    >
+                        <img 
+                            data-src="https://cms.abpx.kz{{ item.path }}" 
+                            class="gallery-items__img swiper-lazy"
+                            alt="{{ item.meta.title }}"
+                        >
+                        <div class="swiper-lazy-preloader"></div>
+                    </swiper-slide>
+                {% endfor %}
+            </carousel-swiper>
+        </div>
+    </section>
+{% endif %}

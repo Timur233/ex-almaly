@@ -1,0 +1,107 @@
+.btn {
+    display: inline-block;
+    position: relative;
+    padding: 14px 20px;
+    font-size: 12px;
+    line-height: normal;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: $white;
+    cursor: pointer;
+    border-radius: 1px;
+    border: 2px solid $primary-color;
+    background-color: $primary-color;
+    transition: 
+        $fast-animation background-color, 
+        $fast-animation border-color,
+        $slow-animation box-shadow;
+    user-select: none;
+
+    @media (max-width: 520px) {
+        font-size: 16px;
+        padding: spacer(3) spacer(7);
+    }
+
+    &:hover {
+        background-color: lighten($blue, 5);
+        border-color: lighten($blue, 5);
+    }
+
+    &:focus,
+    &:active {
+        box-shadow: 0 0 0 2px rgba($black, 0.3);
+    }
+
+    &__circle {
+        padding: spacer(2);
+        border-color: rgba($gray-light-btns, .2);
+        background-color: rgba($gray-light-btns, .2);
+        box-shadow: 0px 2px 5px -3px rgba($black, 45%);
+
+        & > img {
+            display: block;
+            transition: $fast-animation transform, $fast-animation box-shadow;
+        }
+
+        &--active > img {
+            transform: rotate(180deg);
+        }
+
+        &:hover {
+            background-color: rgba($gray-light-btns, .2);
+            border-color: rgba($gray-light-btns, .2);
+        }
+    
+        &:focus,
+        &:active {
+            background-color: rgba($gray-light-btns, .4);
+            border-color: rgba($gray-light-btns, .4);
+            box-shadow: 0px 0px 5px -3px rgba($black, 45%);
+        }
+    }
+
+    &--black {
+        border: none;
+        background: $black;
+        color: $white;
+    }
+    
+    &--gradient {
+        border: none;
+        color: $text;
+        background: $button-gradient;
+        box-shadow: 12px 12px 15px rgb(0 0 0 / 30%);
+
+        &:focus,
+        &:active {
+            box-shadow: 0 0 0 2px rgba($black, 0.3);
+        }
+    }
+
+    &--inner-shadow {
+        padding: 6px 10px;
+        min-width: 36px;
+        background: #f4f3f1 !important;
+        font-size: 12px;
+        font-weight: 400;
+        color: #333;
+        text-align: center;
+        box-shadow: inset 2px 2px 4px #d9d5ce !important;
+        transition: box-shadow .3s,-webkit-box-shadow .3s;
+        border: none;
+        letter-spacing: 0;
+
+        &.active {
+            background: $primary-color !important;
+            box-shadow: 2px 2px 8px rgb(0 77 60 / 70%) !important;
+            color: #fff;
+            font-weight: 900;
+        }
+    }
+
+    &--filter-big {
+        padding: 8px 14px;
+        font-size: 16px;
+    }
+
+}

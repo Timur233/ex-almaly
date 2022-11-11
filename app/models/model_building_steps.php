@@ -23,7 +23,7 @@
                 $item['preview'] = (!empty($item['preview']) && 
                     isset($item['preview'])) ? 
                     $item['preview'] : 
-                    $item['gallery'][0]['styles'][0]['path'];
+                    $item['gallery'][0]['styles'][0]['path'] ?? '';
 
                 array_push($sorted_array, $item);
             }
@@ -66,6 +66,7 @@
                         'date' => 1,
                         'gallery' => 1,
                         'preview' => 1,
+                        'panoramas' => 1,
                     ),
                     'lang'   => self::$lang
                 ));

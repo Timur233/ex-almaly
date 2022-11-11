@@ -1,0 +1,65 @@
+@font-face{
+	font-family:"Proxima Nova";
+	src:local("Proxima Nova Regular"),
+		local("ProximaNova-Regular"),
+		url(../fonts/proxima-nova/ProximaNova-Regular.woff2) format("woff2"),
+		url(../fonts/proxima-nova/ProximaNova-Regular.woff) format("woff"),
+		url(../fonts/proxima-nova/ProximaNova-Regular.ttf) format("truetype");
+	font-weight:normal;
+	font-style:normal;
+	font-display:swap
+}
+@font-face{
+	font-family:"Proxima Nova";
+	src:local("Proxima Nova Light"),
+		local("ProximaNova-Light"),
+		url(../fonts/proxima-nova/ProximaNova-Light.woff2) format("woff2"),
+		url(../fonts/proxima-nova/ProximaNova-Light.woff) format("woff"),
+		url(../fonts/proxima-nova/ProximaNova-Light.ttf) format("truetype");
+	font-weight:300;
+	font-style:normal;
+	font-display:swap
+}
+@font-face{
+	font-family:"Proxima Nova";
+	src:local("Proxima Nova Bold"),
+		local("ProximaNova-Bold"),
+		url(../fonts/proxima-nova/ProximaNova-Bold.woff2) format("woff2"),
+		url(../fonts/proxima-nova/ProximaNova-Bold.woff) format("woff"),
+		url(../fonts/proxima-nova/ProximaNova-Bold.ttf) format("truetype");
+	font-weight:700;
+	font-style:normal;
+	font-display:swap
+}
+@font-face{
+	font-family:"Proxima Nova";
+	src:local("Proxima Nova SemiBold"),
+		local("ProximaNova-SemiBold"),
+		url(../fonts/proxima-nova/ProximaNova-SemiBold.woff2) format("woff2"),
+		url(../fonts/proxima-nova/ProximaNova-SemiBold.woff) format("woff"),
+		url(../fonts/proxima-nova/ProximaNova-SemiBold.ttf) format("truetype");
+	font-weight:600;
+	font-style:normal;
+	font-display:swap
+}
+@font-face{
+	font-family:"Proxima Nova";
+	src:local("Proxima Nova ExtraBold"),
+		local("ProximaNova-ExtraBold"),
+		url(../fonts/proxima-nova/ProximaNova-ExtraBold.woff2) format("woff2"),
+		url(../fonts/proxima-nova/ProximaNova-ExtraBold.woff) format("woff"),
+		url(../fonts/proxima-nova/ProximaNova-ExtraBold.ttf) format("truetype");
+	font-weight:800;
+	font-style:normal;
+	font-display:swap
+}
+// @font-face{
+// 	font-family:"Intro";
+// 	src:local("Intro-Black"),
+// 		url(../fonts/proxima-nova/Intro-Black.woff2) format("woff2"),
+// 		url(../fonts/proxima-nova/Intro-Black.woff) format("woff"),
+// 		url(../fonts/proxima-nova/Intro-Black.ttf) format("truetype");
+// 	font-weight:900;
+// 	font-style:normal;
+// 	font-display:swap
+// }

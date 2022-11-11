@@ -1,0 +1,203 @@
+.main-header {
+    position: fixed;
+    width: 100%;
+    color: $white;
+    z-index: 11;
+    -webkit-transition: -webkit-box-shadow .3s;
+    transition: -webkit-box-shadow .3s;
+    transition: box-shadow .3s, background-color .24s;
+    transition: box-shadow .3s, background-color .24s, -webkit-box-shadow .3s;
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &--sticky {
+        transform: translateY(0);
+        color: $text;
+        background-color: $white;
+
+        -webkit-box-shadow: 2px 2px 8px rgb(0 77 60 / 20%);
+        box-shadow: 2px 2px 8px rgb(0 77 60 / 20%);
+    }
+
+    &__menu-toggle {
+        display: none;
+        flex: 0 0 10%;
+    }
+
+    &__contact {
+        flex: 0 0 auto;
+        margin-left: 60px;
+        
+        @media (max-width: 1385px) {
+            flex: 0 0 12%;
+        }
+        
+        @media (max-width: 1160px) {
+            flex: 0 0 30%;
+        }
+    }
+
+    &__logo {
+        flex: 0 0 auto;
+        justify-content: center;
+        margin-right: spacer(4);
+    }
+
+    &__navigate {
+        flex: 0 0 auto;
+        margin-left: auto;
+    }
+
+    &:not(.main-header--sticky) {
+    }
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    padding: spacer(2) spacer(2) spacer(2) spacer(0);
+    cursor: pointer;
+
+    &__line {
+        display: inline-block;
+        height: 2px;
+        width: 29px;
+        opacity: 1;
+        border-radius: 4px;
+        transform-origin: left;
+        transform: rotate(0);
+        background-color: $white;
+        transition: transform $slow-animation;
+
+        &:last-child, &:first-child {
+            width: 22px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 6px;
+        }
+    }
+
+    &--open {
+        & .menu-toggle__line:first-child {
+            width: 22px;
+            transform: rotate(45deg);
+        }
+
+        & .menu-toggle__line:nth-child(2) {
+            transform: translateX(20%);
+            opacity: 0;
+        }
+
+        & .menu-toggle__line:last-child {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.logo-block {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: spacer(8);
+
+    &__img{
+        width: 74px;
+    }
+}
+
+.navigate {
+    
+    &__block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__link {
+        position: relative;
+        font-size: 14.8px;
+        font-weight: 400;
+        color: #000;
+        margin: 0 spacer(4);
+        transition: color .3s;
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            right: 100%;
+            transition: right $slow-animation;
+            background-color: $orange;
+        }
+
+        &--active::before {
+            right: 0;
+        }
+
+        &:hover {
+            color: $orange;
+        }
+    }
+}
+
+.lang-switcher {
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.main-contact {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    &__block {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__phone {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #000;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1;
+
+        & > img {
+            width: 13px;
+        }
+    }
+
+    &__callback-link {
+        font-size: 13.5px;
+        font-weight: 300;
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding: 16px 24px;
+        letter-spacing: 2px;
+        background: $primary-color;
+        -webkit-box-shadow: 2px 2px 8px rgb(0 77 60 / 70%);
+        box-shadow: 2px 2px 8px rgb(0 77 60 / 70%);
+    }
+
+    &__mobile {
+        display: none;
+
+        & > img {
+            height: 28px;
+        }
+    }
+}

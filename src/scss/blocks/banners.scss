@@ -1,0 +1,14 @@
+.banners {
+    &__list {
+        margin: 0 -8px;
+        row-gap: 16px;
+    }
+
+    &__item {
+        padding: 0 8px;
+    }
+
+    &__image {
+        width: 100%;
+    }
+}

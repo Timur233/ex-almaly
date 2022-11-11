@@ -1,0 +1,32 @@
+{% if carousel_enable %}
+    <section class="section carousel">
+        <div class="container">
+            {% if carousel_title %}
+                <div class="section__title-block">
+                    <h2 class="section__title">{{ carousel_title }}</h2>
+                </div>
+            {% endif %}
+            <carousel-swiper 
+                :per-view="2.7" 
+                :is-loop="false" 
+                class="carousel-items"
+            >
+                {% for item in carousel_items %}
+                    <swiper-slide 
+                        class="carousel-items__one" 
+                        @click="showLightBox(
+                            ['https://cms.abpx.kz{{ item.path }}']
+                        )"
+                    >
+                        <img 
+                            data-src="https://cms.abpx.kz{{ item.path }}" 
+                            class="carousel-items__img swiper-lazy"
+                            alt="{{ item.meta.title }}"
+                        >
+                        <div class="swiper-lazy-preloader"></div>
+                    </swiper-slide>
+                {% endfor %}
+            </carousel-swiper>
+        </div>
+    </section>
+{% endif %}

@@ -1,0 +1,41 @@
+<section id="filterAppartaments" 
+    class="
+        section 
+        section--gray 
+        section--crop 
+        appartaments
+    "
+    ref="appartaments"
+>
+    <img 
+        src="https://cms.abpx.kz/storage/uploads/2022/11/10/636cc20e3fe0fflats-img.svg" 
+        class="section__paralax appartaments__paralax"
+        :style="{transform: paralaxEffect?.paralax?.appartaments}"
+    >
+    <div class="container">
+        <filter-appartaments
+            :section-title="'Квартиры'"
+        >
+            <div class="flats-info">
+                <div class="flats-info__pay-methods flats-pay">
+                    <span class="flats-pay__label">Выберите условия покупки</span>
+                    <ul class="flats-pay__list">
+                        <li class="flats-pay__item">Оплата 100%</li>
+                        <li class="flats-pay__item">Рассрочка</li>
+                        <li class="flats-pay__item">Ипотека</li>
+                    </ul>
+                </div>
+
+                <div class="flats-info__order flats-order">
+                    <span class="flats-order__title">
+                        Выберите свою квартиру
+                    </span>
+                    <span class="flats-order__label">
+                        Квартиры сдаются в черновой отделке
+                    </span>
+                    <button class="btn btn--primary">Отправить заявку</button>
+                </div>
+            </div>
+        </filter-appartaments>
+    </div>
+</section>

@@ -1,0 +1,106 @@
+.appartaments {
+    z-index: 0;
+
+    &__paralax {
+        z-index: -1;
+        left: -302.2px;
+        top: -199px;
+    }
+
+    &__filter-block {
+        &:not(:last-child) {
+            margin-bottom: 28px;
+        }
+    }
+
+    &__flex {
+        align-items: center;
+    }
+}
+
+.filter-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &__label {
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
+
+.flats-swiper {
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.flats-info {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 28px;
+
+    &__pay-methods {
+        margin-bottom: 40px;
+    }
+}
+
+.flats-pay {
+    &__label {
+        font-size: 13px;
+        font-weight: 300;
+        margin-bottom: 16px;
+        display: block;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 12px;
+        margin-bottom: 12px;
+        list-style: none;
+        padding: 0;
+    }
+
+    &__item {
+        background: $button-gradient;
+        font-size: 13px;
+        line-height: 1;
+        font-weight: 900;
+        text-transform: uppercase;
+        padding: 12px;
+        width: 172px;
+    }
+}
+
+.flats-order {
+    padding-left: 40px;
+    
+    &__title {
+        display: block;
+        color: $primary-color;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 900;
+        margin-bottom: 8px;
+    }
+
+    &__label {
+        font-size: 13px;
+        font-weight: 300;
+        margin-bottom: 16px;
+        display: block;
+    }
+}

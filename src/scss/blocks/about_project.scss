@@ -1,0 +1,127 @@
+.about-project {
+    position: relative;
+
+    &__images {
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__image {
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+
+    &__paralax {
+        left: 0;
+        bottom:-305px;
+        z-index: -1;
+    }
+}
+
+.about-images {
+    margin-left: -8px;
+    margin-right: -8px;
+
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    &__left {
+        width: 42%;
+        height: 292px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    &__right {
+        width: 58%;
+        height: 292px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.about-details {
+    position: relative;
+    overflow: hidden;
+    padding: 32px 40px;
+    background-color: #cfa36a;
+    background-image: linear-gradient(274.56deg,#cfa36a 9.26%,#e5be8c 79.66%);
+    margin-bottom: 16px;
+
+    &__sub-title {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 100;
+        color: black;
+    }
+
+    &__left {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: #fff;
+            right: 0;
+            width: 2px;
+            top: 10px;
+            bottom: 10px;
+        }
+    }
+
+    &__right {
+        padding-left: 40px;
+    } 
+
+    &__paralax {
+        position: absolute;
+        width: 355px;
+        height: 355px;
+        position: absolute;
+        right: -100px;
+        top: 40px;
+        z-index: 0;
+    }
+}
+
+.detail-item {
+    padding-right: 20px;
+    position: relative;
+
+    &__title {
+        display: block;
+        font-size: 30px;
+        font-weight: 700;
+        color: #004d43;
+        line-height: 1;
+        margin-bottom: 8px;
+    }
+
+    &__sub-title {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 400;
+        line-height: 1.2;
+        color: black;
+        display: block;
+
+        &:not(:last-child) {
+            height: 29px;
+            margin-bottom: 8px;
+        }
+
+        & > p {
+            margin-bottom: 0;
+        }
+
+    }
+}

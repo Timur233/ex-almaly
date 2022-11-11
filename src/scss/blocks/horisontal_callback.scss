@@ -1,0 +1,19 @@
+.callback-h {
+    overflow: hidden;
+
+    &__title-block {
+        margin-bottom: 60px;
+    }
+
+    &__paralax {
+        mix-blend-mode: normal;
+        right: 10%;
+        top: -250px;
+    }
+
+    &__form {
+        & > .flex {
+            gap: 16px;
+        }
+    }
+}

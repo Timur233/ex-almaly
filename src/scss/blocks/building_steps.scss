@@ -1,0 +1,70 @@
+.building-steps {
+    &__item {
+        position: relative;
+        z-index: 0;
+        padding: 16px;
+        height: 304px !important;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: #cfa36a;
+        background-image: linear-gradient(176.36deg,#cfa36a -.72%,#e5be8c 52.15%);
+        overflow: hidden;
+
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        &.swiper-slide-active {
+            &::before {
+                visibility: visible;
+            }
+        }
+
+        &::before {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            visibility: hidden;
+            content: '';
+            pointer-events: none;
+            width: 453px;
+            height: 453px;
+            transform: translate(-68%, -44%);
+            background-size: 100% 100%;
+            background-image: url('https://cms.abpx.kz/storage/uploads/2022/11/11/636e262f3894ahistory-img.svg');
+        }
+        
+        &::after {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            content: "";
+            z-index: -1;
+            background-image: linear-gradient(276.36deg,#cfa36a -.72%,#e5be8c 52.15%);
+            opacity: 0;
+            -webkit-transition: opacity .4s;
+            transition: opacity .4s;
+        }
+    }
+}
+
+.building-item__plus {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    font-weight: 600;
+    color: #fff;
+    user-select: none;
+}
+
+.building-item__date {
+    user-select: none;
+}

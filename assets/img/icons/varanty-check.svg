@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" viewBox="0 0 64.537 64.5684" xml:space="preserve">
+<defs>
+<path d="M17.9622 22.7072C16.1694 22.7072 10.8113 27.5696 10.8113 30.1017C10.8113 31.9323 18.2406 38.5642 19.751 40.0746C21.3388 41.6617 27.8191 49.0151 29.8423 49.0151C32.0195 49.0151 37.2414 42.8898 38.7852 41.3461L55.4534 24.6778C56.8587 23.2702 63.3042 17.5989 63.3042 15.7969C63.3042 13.0103 57.7837 8.40241 56.0296 8.40241C54.0373 8.40241 47.7891 15.4922 46.2392 17.0397L32.4185 30.8604C29.5314 33.7475 30.4804 34.0746 27.7511 31.3445C26.1927 29.7861 19.9769 22.7072 17.9622 22.7072" fill-rule="evenodd" id="Fill"></path>
+<image height="7" id="Image" overflow="visible" width="8" xlink:href="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAACKADAAQAAAABAAAABwAAAAAX1OyDAAAAHGlET1QAAAACAAAAAAAAAAQAAAAoAAAABAAAAAMAAACsjSlUxQAAAHhJREFUGBlMzMsKQVEUgOH9kEYGBlKUFCWRhBQlPJ7kuJ+DI9eRvdbag58Zg2/6OU0a6KGG7SrYpoStCoRljrDIEuYZnFz6yLmDHptoXEf3VWxbxtZFLMrj/HOC3EfIdYCkXfTU5n9177SHf02/ZvjHGLkN+a0tPgAAAP//qtS6uwAAAGRJREFUY/h6M/H/1/v5/789q/n/7U37/+8fJ/z//r7n/4+37f9/vG7+z/D5tN3/Lxd9/3+5FvP/652M/98elf7/9qLh//cPvUDcB1Jg8f/zCWMgNvv/+Zzb/y+XQ/9/vZUMNxUAgEC34j4Zi2wAAAAASUVORK5CYII="></image>
+</defs>
+<g id="Слой-1" vectornator:layerName="Слой 1">
+<g opacity="1">
+<g opacity="1" vectornator:mask="#Fill">
+<clipPath id="ClipPath">
+<use overflow="#visible" xlink:href="#Fill"></use>
+</clipPath>
+<g clip-path="url(#ClipPath)">
+<use opacity="1" transform="matrix(7.73399 0 0 7.73399 7.30396 1.28018)" xlink:href="#Image"></use>
+</g>
+</g>
+<path d="M1.23278 16.1612L1.23278 48.4072C1.23278 53.7986 6.30782 58.5906 11.7804 58.5906L43.2987 58.5906C49.2206 58.5906 53.8463 53.5704 53.8463 47.5588L53.8463 36.1636C53.8463 35.3747 53.3073 34.7103 52.6336 34.7103C51.7419 34.7103 49.1193 37.4157 49.0079 38.2355C48.2933 43.5147 51.4124 53.7437 42.6939 53.7437L12.1439 53.7437C8.98687 53.7437 6.08199 51.2487 6.08199 48.2874L6.08199 16.2818C6.08199 13.3197 8.98687 10.827 12.1439 10.827L43.1788 10.827L45.1146 11.0985C45.7349 11.1689 48.1487 8.66306 48.1487 8.03814C48.1487 6.60659 44.9894 5.97781 43.4217 5.97781L11.7804 5.97781C6.30782 5.97781 1.23278 10.7721 1.23278 16.1612" fill="#c2a13a" fill-rule="evenodd" opacity="1" stroke="none"></path>
+</g>
+</g>
+</svg>

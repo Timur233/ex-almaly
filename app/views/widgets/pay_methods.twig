@@ -1,0 +1,54 @@
+<section class="
+        pay-methods 
+        section 
+        section--crop 
+        section--primary
+    "
+    ref="payMethods"
+>
+    <div class="container">
+        <div class="section__title-block">
+            <h2 class="section__title section__title--gold">
+                {{ pay_methods_title }}
+            </h2>
+        </div>
+        <div class="flex pay-methods__list">
+            {% for item in pay_methods_items %}
+                <div class="flex__1-4 pay-methods__item">
+                    <img 
+                        class="pay-methods__icon"
+                        src="https://cms.abpx.kz{{ item.children[0].settings.image.path }}" 
+                        alt="{{ item.children[1].settings.text }}"
+                    >
+                    <h3 class="pay-methods__name">
+                        {{ item.children[1].settings.text }}
+                    </h3>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="pay-methods__varanty">
+            <a 
+                class="pay-methods__varanty-link"
+                @click="showLightBox(
+                    ['https://cms.abpx.kz/{{ pay_methods_varanty }}']
+                )"
+            >
+                <img 
+                    src="{{ base_url }}assets/img/icons/varanty-check.svg" 
+                    alt=""
+                >
+                <span>{{ pay_methods_varanty_title }}</span>
+            </a>
+        </div>
+    </div>
+    <img 
+        class="section__paralax section__paralax--primary" 
+        src="https://cms.abpx.kz/storage/uploads/2022/10/19/634fda74b60e6order-img-3.svg"
+        :style="{transform: paralaxEffect?.paralax?.pay_methods}"
+    >
+    <img 
+        class="section__paralax section__paralax--second" 
+        src="https://cms.abpx.kz/storage/uploads/2022/10/20/63512b3579128order-img-1.svg"
+        :style="{transform: paralaxEffect?.paralax?.pay_methods_two}"
+    >
+</section>

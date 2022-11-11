@@ -1,0 +1,21 @@
+{% if banners %}
+    <section class="section banners">
+        <div class="container">
+            {% if banners_title %}
+                <div class="section__title-block">
+                    <h2 class="section__title">{{ banners_title }}</h2>
+                </div>
+            {% endif %}
+            <div class="flex banners__list">
+                {% for banner in banners_list %}
+                    <div class="banners__item {{ banner.settings.class }}">
+                        <img 
+                            src="https://cms.abpx.kz{{ banner.children[0].settings.image.path }}" 
+                            class="banners__image"
+                        >
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endif %}

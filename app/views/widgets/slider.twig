@@ -1,62 +1,49 @@
-<section id="home" class="main-slider">
+<section id="home" class="main-slider" ref="sliderSection">
     
     <div class="main-slider__swiper swiper-container">
         <div class="swiper-wrapper main-slider__wrapper">
-            {% for slide in slider_items %}
-                <div 
-                    class="swiper-slide main-slider__slide" 
-                    style="background-image: 
-                        url('https://cms.abpx.kz{{ slide.children[2].settings.image.path }}')"
-                >
-                    <div class="main-slider__shadow"></div>
-                    <div class="main-slider__content">
-                        <div class="container">
-                            <div class="slider-content">
-                                <h1 class="slider-content__title animate__animated animate__fadeInUp">
-                                    {{ slide.children[0].settings.text|raw }}
-                                </h1>
-                                <div class="slider-content__body animate__animated animate__fadeInUp">
-                                    <p class="slider-content__accent-text">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        {{ site_adress }}
-                                    </p>
-                                    {{ slide.children[1].settings.text|raw }}
-                                </div>
-                                <a href="#appartaments" class="btn btn--gradient slider-content__button animate__animated animate__fadeInUp">
-                                    Квартиры
-                                </a>
+            <div 
+                class="swiper-slide main-slider__slide" 
+            >
+                <div class="main-slider__image" :style="{transform: paralaxEffect?.paralax?.slider}">
+                    <img src="https://cms.abpx.kz{{ slider_image.path }}">
+                </div>
+                <div class="main-slider__content">
+                    <div class="slider-promo">
+                        <div class="slider-promo__developer promo-developer">
+                            <span class="promo-developer__label">Застройщик</span>
+                            <img 
+                                src="https://cms.abpx.kz/storage/uploads/2022/02/09/620411381e38861c9645a93a2blogo-bold-1.svg" 
+                                class="promo-developer__logo"
+                            >
+                            <a href="https://exin.kz/" target="_blank" class="promo-developer__link">
+                                exin.kz
+                            </a>
+                        </div>
+                        <div class="slider-promo__info promo-info">
+                            <div class="promo-info__price promo-price">
+                                <h3 class="promo-price__title">
+                                    от 360 000 тг/м<sup>2</sup>
+                                </h3>
+                            </div>
+                            <div class="promo-info__contribution promo-contribution">
+                                <span class="promo-contribution__label">
+                                    Первоначальный взнос от
+                                </span>
+                                <span class="promo-contribution__value">
+                                    20%
+                                </span>
+                            </div>
+                            <div class="promo-info__links promo-links">
+                                <span class="promo-links__label">
+                                    <strong>Новый район</strong> города
+                                </span>
+                                <button class="btn btn--gradient">Выбрать квартиру</button>
                             </div>
                         </div>
                     </div>
-
-                    <span class="main-slider__author-label author-label">
-                        Exclusive Almaly
-                    </span>
                 </div>
-            {% endfor %}
-        </div>
-
-        <div class="container">
-            <div class="main-slider__ex-link">
-                <a 
-                    href="https://exin.kz/"
-                    target="_blank"
-                >
-                    <img src="https://cms.abpx.kz{{ exin_logo.path }}" alt="Exclusive Qurylys">
-                </a>
             </div>
-        </div>
-
-        <div class="main-slider__pagination"></div>
-    </div>
-
-    <div class="lines">
-        <div class="lines__wrapper container">
-            <span class="lines__line lines__line--1"></span>
-            <span class="lines__line lines__line--2"></span>
-            <span class="lines__line lines__line--3"></span>
-            <span class="lines__line lines__line--2"></span>
-            <span class="lines__line lines__line--1"></span>
         </div>
     </div>
     

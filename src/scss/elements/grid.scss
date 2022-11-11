@@ -1,0 +1,88 @@
+@mixin col-flex($size) {
+    flex: 0 0 auto;
+    width: $size;
+}
+
+.container {
+    max-width: $container;
+    padding: 0 spacer(4);
+    margin: 0 auto;
+}
+
+.container-fluid {
+    width: $container-fluid;
+    max-width: 100%;
+    padding: 0 0;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;  
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__col {
+        flex: 1 1 auto;
+        max-width: 100%;
+    }
+
+    &__1-2 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    &__1-3 {
+        flex: 0 0 auto;
+        width: calc(100% / 3);
+    }
+
+    &__1-4 {
+        flex: 0 0 auto;
+        width: calc(100% / 4);
+    }
+
+    &__4 {
+        flex: 0 0 auto;
+        width: calc(calc(100%/12)*4);
+    }
+
+    &__5 {
+        flex: 0 0 auto;
+        width: calc(calc(100%/12)*5);
+    }
+
+    &__6 {
+        flex: 0 0 auto;
+        width: calc(calc(100%/12)*6);
+    }
+
+    &__7 {
+        flex: 0 0 auto;
+        width: calc(calc(100%/12)*7);
+    }
+
+    &__8 {
+        flex: 0 0 auto;
+        width: calc(calc(100%/12)*8);
+    }
+
+    &__9 {
+        flex: 0 0 auto;
+        width: calc(calc(100%/12)*9);
+    }
+
+    &__2 {
+        flex: 0 0 auto;
+        width: calc(calc(100%/12)*2);
+    }
+
+    &__3 {
+        flex: 0 0 auto;
+        width: calc(calc(100%/12)*3);
+    }
+
+    &--v-center {
+        align-items: center;
+    }
+} 
+

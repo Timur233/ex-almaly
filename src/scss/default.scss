@@ -1,0 +1,116 @@
+body {
+    overflow-x: hidden;
+    font-family: "Proxima Nova",sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: $text;
+    -webkit-tap-highlight-color: transparent;
+
+    @media (max-width: 1440px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: 376px) {
+        font-size: 14px;
+    }
+}
+
+.section {
+    padding: spacer(15) 0;
+    position: relative;
+
+    &__title-block {
+        display: block;
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.4;
+        letter-spacing: .05em;
+        color: $primary-color;
+        text-transform: uppercase;
+
+        &--gold {
+            font-weight: 800;
+            background: linear-gradient(274.56deg,#cfa36a 9.26%,#e5be8c 79.66%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @media (max-width: 900px) {
+            font-size: 24px;
+            letter-spacing: 0;
+        }
+    }
+
+    &__paralax {
+        position: absolute;
+        mix-blend-mode: overlay;
+        user-select: none;
+
+        &--primary {
+            width: 40.875rem;
+            height: 40.875rem;
+            left: calc(50% + 13.5625rem);
+            top: -20.4375rem;
+        }
+
+        &--second {
+            width: 21rem;
+            height: 21.0625rem;
+            left: calc(50% - 48.875rem);
+            top: 4.0625rem;
+        }
+    }
+
+    &--crop {
+        overflow: hidden;
+    }
+
+    &--primary {
+        background-color: $primary-color;
+    }
+
+    &--gray {
+        background-color: #f4f3f1;
+    }
+
+    &--pb {
+        padding-top: 0;
+    }
+
+    &--pt {
+        padding-bottom: 0;
+    }
+
+    @media (max-width: 830px) {
+        padding: spacer(12) 0;
+    }
+}
+
+.swiper-wrapper {
+    height: auto !important;
+}  
+
+.footer-content--bottom {
+    top: 40px;
+    flex-direction: column;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.4;
+
+    &>a {
+        text-decoration: underline;
+    }
+} 
+
+footer.common-footer:before {
+    background: rgba(14, 14, 14, .9) !important;
+}
+
+.fslightbox-source {
+    background: #fff;
+}
