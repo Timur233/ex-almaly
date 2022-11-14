@@ -17966,7 +17966,7 @@ var _hoisted_6 = {
   "class": "input-group flex__col"
 };
 var _hoisted_7 = {
-  "class": "input-group flex__3"
+  "class": "input-group flex__col"
 };
 var _hoisted_8 = {
   key: 0,

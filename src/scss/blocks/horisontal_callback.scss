@@ -17,3 +17,22 @@
         }
     }
 }
+
+.second-callback {
+    &__block {
+        padding: spacer(10);
+        background-color: $primary-color;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__form {
+        margin-bottom: 0;
+        margin-top: spacer(10);
+        margin-left: auto;
+    }
+
+    & .btn {
+        width: 100%;
+    }
+}

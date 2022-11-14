@@ -7930,6 +7930,21 @@ footer.common-footer:before {
   gap: 16px;
 }
 
+.second-callback__block {
+  padding: 40px;
+  background-color: rgb(0, 77, 67);
+  overflow: hidden;
+  position: relative;
+}
+.second-callback__form {
+  margin-bottom: 0;
+  margin-top: 40px;
+  margin-left: auto;
+}
+.second-callback .btn {
+  width: 100%;
+}
+
 .appartaments {
   z-index: 0;
 }

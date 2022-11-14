@@ -25,7 +25,7 @@
                 </div>
             </div>
 
-            <div class="input-group flex__3">
+            <div class="input-group flex__col">
                 <button 
                 class="btn btn--gradient" 
                 @click.prevent="sendForm"
