@@ -19,6 +19,7 @@ body {
 .section {
     padding: spacer(15) 0;
     position: relative;
+    z-index: 0;
 
     &__title-block {
         display: block;
@@ -40,6 +41,10 @@ body {
             -webkit-text-fill-color: transparent;
         }
 
+        @media (min-width: 1600px) {
+            font-size: 28px;
+        }
+
         @media (max-width: 900px) {
             font-size: 24px;
             letter-spacing: 0;
@@ -49,7 +54,13 @@ body {
     &__paralax {
         position: absolute;
         mix-blend-mode: overlay;
+        user-drag: none;  
         user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        z-index: -1;
 
         &--primary {
             width: 40.875rem;
@@ -76,6 +87,11 @@ body {
 
     &--gray {
         background-color: #f4f3f1;
+    }
+
+    &--gradient {
+        background-color: #cfa36a;
+        background-image: linear-gradient(274.56deg,#cfa36a 9.26%,#e5be8c 79.66%);
     }
 
     &--pb {

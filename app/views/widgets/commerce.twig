@@ -40,7 +40,10 @@
                         <span>35 000+ человек</span>
                     </div>
                 </div>
-                <button class="btn btn--gradient com-info__button">
+                <button 
+                    class="btn btn--gradient com-info__button"
+                    @click="callbackModalShow = !callbackModalShow"
+                >
                     Получить консультацию
                 </button>
             </div>

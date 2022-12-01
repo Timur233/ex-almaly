@@ -17,6 +17,10 @@
     &__one {
         height: 364px !important;
 
+        @media (min-width: 1600px) {
+            height: 420px !important;
+        }
+
         &::after {
             content: "";
             position: absolute;

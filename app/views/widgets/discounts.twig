@@ -9,11 +9,14 @@
             <discount-swiper>
                 {% for item in discount_items %}
                     <swiper-slide>
-                        <img 
-                            class="swiper-lazy" 
-                            src="https://cms.abpx.kz{{ item.path }}" 
-                            alt="{{ item.meta.title }}"
-                        >
+                        <picture>
+                            <source 
+                                media="(max-width: 550px)" 
+                                srcset="https://cms.abpx.kz{{ item.children[1].settings.image.path }}">
+                            <img 
+                                src="https://cms.abpx.kz{{ item.children[0].settings.image.path }}" 
+                                class="swiper-lazy discounts__image">
+                        </picture>
                         <div class="swiper-lazy-preloader"></div>
                     </swiper-slide>
                 {% endfor %}

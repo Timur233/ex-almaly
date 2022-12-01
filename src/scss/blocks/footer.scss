@@ -1,0 +1,58 @@
+.common-footer {
+    position: relative;
+    overflow: hidden;
+
+    &__paralax {
+        right: -150px;
+        top: -234px;
+    }
+
+    &__map {
+        padding-right: 60px;
+    }
+}
+
+.contacts {
+    &__items {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 300;
+        margin-bottom: 32px;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+
+    &__copyright {
+        font-size: 10px;
+        color: #fff;
+
+        @media (min-width: 1600px) {
+            font-size: 12px;
+        }
+    }
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    &__icon {
+        width: 14px;
+        margin-right: 12px;
+        margin-top: 8px;
+    }
+
+    & strong {
+        font-size: 20px;
+    }
+}

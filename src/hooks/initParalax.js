@@ -62,5 +62,17 @@ export default function useInitParalax($refs) {
             end:   20,
             el:    $refs.appartaments,
         },
+        {
+            name:  'about_company',
+            start: 0,
+            end:   20,
+            el:    $refs.aboutCompany,
+        },
+        {
+            name:  'about_company_two',
+            start: 0,
+            end:   20,
+            el:    $refs.aboutCompany,
+        },
     ]);
 }

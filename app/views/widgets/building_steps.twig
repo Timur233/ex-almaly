@@ -13,7 +13,7 @@
                     <swiper-slide 
                         class="building-steps__item building-item" 
                         @click="showLightBox(
-                            {% if item.panoramas %}['{{ item.panoramas[0] }}']{% endif %}
+                            {% if item.panoramas %}'{{ item.panoramas[0] }}', true{% endif %}
                             {% if item.gallery %}
                                 [{% for image in item.gallery %} 
                                     'https://cms.abpx.kz{{ image.path }}', 
@@ -23,7 +23,7 @@
                     >
                         <span class="building-item__plus">+</span>
                         <span class="building-item__date">
-                            {{ item.format_date.month }}
+                            {{ translate[item.format_date.month] }}
                             {{ item.format_date.year }}
                         </span>
                     </swiper-slide>

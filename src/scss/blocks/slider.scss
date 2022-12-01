@@ -71,11 +71,19 @@
         font-weight: 700;
         letter-spacing: 2px;
         text-align: center;
+
+        @media (min-width: 1600px) {
+            font-size: 12px;    
+        }
     }
 
     &__logo {
         width: 84px;
         margin: 0 20px 16px;
+
+        @media (min-width: 1600px) {
+            width: 100px;
+        }
     }
 
     &__link {
@@ -120,6 +128,10 @@
 
     &__links {
         flex: 0 0 260px;
+
+        @media (min-width: 1600px) {
+            flex: 0 0 280px;
+        }
     }
 }
 
@@ -129,6 +141,10 @@
     &__title {
         font-size: 24px;
         font-weight: 700;
+
+        @media (min-width: 1600px) {
+            font-size: 28px;    
+        }
     }
 }
 
@@ -141,6 +157,10 @@
     &__label {
         font-size: 20px;
         text-transform: uppercase;
+
+        @media (min-width: 1600px) {
+            font-size: 22px;
+        }
     }
 
     &__value {
@@ -148,6 +168,10 @@
         font-weight: 700;
         line-height: 1.4;
         margin: 0;
+
+        @media (min-width: 1600px) {
+            font-size: 70px;
+        }
     }
 }
 
@@ -162,6 +186,10 @@
         font-size: 20px;
         font-weight: 100;
         margin-bottom: 20px;
+
+        @media (min-width: 1600px) {
+            font-size: 22px;
+        }
     }
 
     & > .btn {

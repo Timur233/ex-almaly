@@ -10,7 +10,11 @@ import DiscountSwiper from './components/DiscountSwiper.vue';
 import CarouselSwiper from './components/CarouselSwiper.vue';
 import BenefitsSwiper from './components/BenefitsSwiper.vue';
 import CallbackForm from './components/CallbackForm.vue';
+import FormModal from './components/FormModal.vue';
 import FilterAppartaments from './components/FilterAppartaments.vue';
+import YandexMap from './components/YandexMap.vue';
+import Modal from './components/base-components/Modal.vue';
+import FsSource from './components/base-components/FsSource.vue';
 
 import useInitParalax from './hooks/initParalax';
 
@@ -24,10 +28,16 @@ window.onload = () => {
             FsLightbox,
             CallbackForm,
             FilterAppartaments,
+            YandexMap,
+            Modal,
+            FormModal,
+            FsSource,
         },
         data() {
             return {
-                paralaxEffect: {},
+                paralaxEffect:      {},
+                callbackModalShow:  false,
+                callbackResultShow: false,
             };
         },
         mounted() {
@@ -45,14 +55,26 @@ window.onload = () => {
             const isLightbox = ref(false);
             const sourcesLightbox = ref([]);
 
-            const showLightBox = (sources) => {
-                isLightbox.value = !isLightbox.value;
-                sourcesLightbox.value = sources;
+            const isBuildingStepBox = ref(false);
+            const buildingStepSource = ref(null);
+
+            const showLightBox = (sources, isPanorama = false) => {
+                if (isPanorama) {
+                    app.provide('buildingStepUrl', sources);
+
+                    buildingStepSource.value = [FsSource];
+                    isBuildingStepBox.value = !isBuildingStepBox.value;
+                } else {
+                    sourcesLightbox.value = sources;
+                    isLightbox.value = !isLightbox.value;
+                }
             };
 
             return {
                 isLightbox,
                 sourcesLightbox,
+                isBuildingStepBox,
+                buildingStepSource,
                 showLightBox,
             };
         },

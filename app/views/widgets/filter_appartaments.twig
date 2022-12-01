@@ -20,7 +20,36 @@
                 <div class="flats-info__pay-methods flats-pay">
                     <span class="flats-pay__label">Выберите условия покупки</span>
                     <ul class="flats-pay__list">
-                        <li class="flats-pay__item">Оплата 100%</li>
+                        <li class="flats-pay__item" ref="flatsPay1">
+                            Оплата 100%
+                            
+                            <div class="flats-pay__hidden">
+                                <div class="section__title-block">
+                                    <h2 class="section__title section__title--gold"> 
+                                        Оплата 100%
+                                    </h2>
+                                </div>
+                                <div class="flats-pay__content" ref="flatsPayContent1">
+                                    <p>Минимальная цена за м<sup>2</sup></p>
+                                    <p>Что нужно сделать?</p>
+                                    <ol>
+                                    <li>Приходите к нам в отдел продаж;</li>
+                                    <li>Выберите квартиру мечты;</li>
+                                    <li>Заключите договор;</li>
+                                    <li>Внесите оплату.</li>
+                                    </ol>
+                                    <p>Мы экономим ваше время</p>
+                                    <ul>
+                                    <li>Персональный менеджер для каждого клиента</li>
+                                    <li>Экскурсии по строительным объектам</li>
+                                    <li>Бесплатные консультации</li>
+                                    <li>Полное сопровождение сделки</li>
+                                    <li>Подбор самых подходящих вариантов</li>
+                                    </ul>
+                                    <p>Покупайте выгодно!</p>
+                                </div>
+                            </div>
+                        </li>
                         <li class="flats-pay__item">Рассрочка</li>
                         <li class="flats-pay__item">Ипотека</li>
                     </ul>
@@ -33,7 +62,10 @@
                     <span class="flats-order__label">
                         Квартиры сдаются в черновой отделке
                     </span>
-                    <button class="btn btn--primary">Отправить заявку</button>
+                    <button 
+                        class="btn btn--primary"
+                        @click="callbackModalShow = !callbackModalShow"
+                    >Отправить заявку</button>
                 </div>
             </div>
         </filter-appartaments>

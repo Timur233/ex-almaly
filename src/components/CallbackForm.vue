@@ -27,10 +27,11 @@
 
             <div class="input-group flex__col">
                 <button 
-                class="btn btn--gradient" 
-                @click.prevent="sendForm"
+                    class="btn btn--gradient" 
+                    @click.prevent="sendForm"
                 >
-                {{ submitText }}
+                    <span v-if="!isLoad">{{ submitText }}</span>
+                    <span v-else>Загрузка</span>
                 </button>
             </div>
         </div>
@@ -56,6 +57,7 @@ export default {
                 isPhoneValid: null,
                 isValid: null,
             },
+            isLoad: false,
             showMessage: false,
             userData: null,
         }
@@ -82,6 +84,8 @@ export default {
         },
         sendForm() {
             if (this.form.isValid) {
+                this.isLoad = true;
+
                 this.formRequest({
                     userName: {
                         name: 'Имя',
@@ -98,11 +102,16 @@ export default {
                         if (res.status === 200) {
                             this.form.name = '';
                             this.form.phone = '';
+
+                            this.$emit('showFormResult');
                         }
                     })
                     .catch(e => {
                         console.log(e);
                     })
+                    .finally(() => {
+                        this.isLoad = false;
+                    });
                 return;
             }
 

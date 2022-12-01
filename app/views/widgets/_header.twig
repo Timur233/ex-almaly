@@ -44,8 +44,11 @@
                   {{ site_phone }}
                </a>
 
-               <button class="main-contact__callback-link">
-                  Отправить заявку{{ translate['callback_title'] }}
+               <button 
+                  class="main-contact__callback-link"
+                  @click="callbackModalShow = !callbackModalShow"
+               >
+                  Отправить заявку
                </button>
 
                <a href="tel:{{ site_phone }}" class="main-contact__mobile">

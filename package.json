@@ -38,7 +38,8 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4",
     "fslightbox-vue": "^2.0.1",
-    "swiper": "^8.4.3"
+    "swiper": "^8.4.3",
+    "vue-yandex-maps": "^0.12.3"
   },
   "lint-staged": {
     "*.{js,ts,vue}": [

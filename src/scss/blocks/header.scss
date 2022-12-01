@@ -33,11 +33,17 @@
     &__contact {
         flex: 0 0 auto;
         margin-left: 60px;
+
         
         @media (max-width: 1385px) {
             flex: 0 0 12%;
         }
         
+        @media (min-width: 1200px) and (max-width: 1385px) {
+            flex: 0 0 34%;
+            margin-left: spacer(5);
+        }
+
         @media (max-width: 1160px) {
             flex: 0 0 30%;
         }
@@ -106,6 +112,10 @@
     flex-wrap: nowrap;
     padding-left: spacer(8);
 
+    @media (min-width: 1200px) and (max-width: 1385px) {
+        padding-left: spacer(4);
+    }
+
     &__img{
         width: 74px;
     }
@@ -127,6 +137,14 @@
         color: #000;
         margin: 0 spacer(4);
         transition: color .3s;
+
+        @media (min-width: 1200px) and (max-width: 1385px) {
+            margin: 0 spacer(2);
+        }
+
+        @media (min-width: 1600px) {
+            font-size: 16px;
+        }
 
         &::before {
             position: absolute;
@@ -160,10 +178,18 @@
     align-items: center;
     gap: 40px;
 
+    @media (min-width: 1200px) and (max-width: 1385px) {
+        gap: 20px;
+    }
+
     &__block {
         display: flex;
         align-items: center;
         gap: 40px;
+
+        @media (min-width: 1200px) and (max-width: 1385px) {
+            gap: spacer(5);
+        }
     }
 
     &__phone {
@@ -191,6 +217,14 @@
         background: $primary-color;
         -webkit-box-shadow: 2px 2px 8px rgb(0 77 60 / 70%);
         box-shadow: 2px 2px 8px rgb(0 77 60 / 70%);
+
+        @media (min-width: 1600px) {
+            font-size: 14px;
+        }
+
+        @media (min-width: 1200px) and (max-width: 1385px) {
+            padding: spacer(4) spacer(4);
+        }
     }
 
     &__mobile {

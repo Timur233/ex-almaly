@@ -34,18 +34,26 @@
             <slot></slot>
         </div> 
     </div>
+
+    <Teleport to="body">
+        <modal :is-show="showFlatsPayModal" @closeModal="closeModal">
+            <div class="flats-pay__info">123</div>
+        </modal>
+    </Teleport>
 </template>
 
 <script>
     import FilterButtons from './appartaments/FilterButtons.vue';
     import FilterSwiper from './appartaments/FilterSwiper.vue';
     import { SwiperSlide } from 'swiper/vue';
+    import Modal from './base-components/Modal.vue';
 
     export default {
         components: {
             FilterButtons,
             FilterSwiper,
             SwiperSlide,
+            Modal,
         },
         data() {
             return {
@@ -59,7 +67,8 @@
                     rooms: [],
                     floors: [],
                     square: [],
-                }
+                },
+                showFlatsPayModal: false,
             }
         },
         props: {
@@ -81,6 +90,8 @@
                 .catch(e => {
                     console.log(e);
                 });
+
+            this.showPayInfo();
         },
         computed: {
             filteredAppartaments() { 
@@ -176,6 +187,20 @@
             clearFilter() {
                 this.selectedParams.floors = null;
                 this.selectedParams.square = null;
+            },
+            showPayInfo() {
+                const flatsItems = document.querySelectorAll('.flats-pay__item');
+
+                flatsItems.forEach(item => {
+                    const content = item.querySelector('.flats-pay__hidden');
+
+                    item.addEventListener('click', () => {
+                        this.showFlatsPayModal = true;
+                    })
+                });
+            },
+            closeModal() {
+                this.showFlatsPayModal = true;
             }
         }
     }

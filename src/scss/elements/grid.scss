@@ -7,6 +7,10 @@
     max-width: $container;
     padding: 0 spacer(4);
     margin: 0 auto;
+
+    @media (min-width: 1600px) {
+        max-width: 1450px;
+    }
 }
 
 .container-fluid {

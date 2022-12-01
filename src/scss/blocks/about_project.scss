@@ -33,6 +33,10 @@
         height: 292px;
         padding-left: 8px;
         padding-right: 8px;
+
+        @media (min-width: 1600px) {
+            height: 350px;
+        }
     }
 
     &__right {
@@ -40,6 +44,10 @@
         height: 292px;
         padding-left: 8px;
         padding-right: 8px;
+
+        @media (min-width: 1600px) {
+            height: 350px;
+        }
     }
 
     &__img {
@@ -104,6 +112,10 @@
         color: #004d43;
         line-height: 1;
         margin-bottom: 8px;
+
+        @media (min-width: 1600px) {
+            font-size: 32px;
+        }
     }
 
     &__sub-title {
@@ -114,9 +126,18 @@
         color: black;
         display: block;
 
+        @media (min-width: 1600px) {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
         &:not(:last-child) {
             height: 29px;
             margin-bottom: 8px;
+
+            @media (min-width: 1600px) {
+                height: 40px;
+            }
         }
 
         & > p {

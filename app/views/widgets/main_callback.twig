@@ -32,6 +32,7 @@
                :no-valid-phone-number="'Пожалуйста, проверьте, правильность введённого вами номера!'"
                :no-valid-form-data="'Не заполнены обязательные поля'"
                :submit-text="'Отправить заявку'"
+               @show-form-result="callbackResultShow = true"
             ></callback-form>
          </div>
       </div>
